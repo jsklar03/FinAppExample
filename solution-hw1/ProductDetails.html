@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Heading works, no errors -->
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Product Details</title>
+  </head>
+<!-- Starts the body -->
+<body class="body">
+
+  <!-- Links the logo to the Product Details -->
+  <a class ="linked" href="../solution-hw1/index.html">
+    <img class="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun Logo">
+  </a>
+
+<!-- Section defines the line underneath the logo for styling -->
+<section class="logo_line"></section>
+
+<!-- Contains the contents of the page for centering -->
+<section class="master_div">
+  <!-- Links the Product word to the Product Gallery -->
+  <a class = "linked" href="../solution-hw1/index.html">
+    <p class="products_heading">Products</p>
+  </a>
+
+  <!-- Links the word cart to the shopping cart -->
+  <a class = "linked" href="../solution-hw1/ShoppingCart.html">
+    <p class="cart">Cart</p>
+  </a>
+
+  <br>
+  <!-- Links the product image to the product gallery -->
+  <a class = "linked" href="../solution-hw1/index.html">
+    <img class="image_detail" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinammon Roll">
+  </a>
+
+  <br>
+  <br>
+
+  <!-- This is the drop down for the options for Glazing-->
+    <form class="glazing_form">        
+        <p class="glazing_label">Glazing:</p>
+        <select name="prod_details_glazing" id="prod_details_glazing">
+            <optgroup class="glazing" label="Glazing">
+                <option value="keep_original">Keep original</option>
+                <option value="sugar_milk">Sugar milk</option>
+                <option value="vanilla_milk">Vanilla milk</option>
+                <option value="double_chocolate">Double chocolate</option>
+            </optgroup>
+        </select>
+    </form>
+    <br>
+
+  <!-- This is the drop down for the options for Pack Size -->
+    <form class="pack_size_form">
+        <p class="pack_size_label">Pack Size:</p>
+        <select name="pack_size_label" id="pack_size_label">
+          <optgroup class="pack_size" label="Pack Size">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="12">12</option>
+          </optgroup>
+        </select>
+    </form>
+    <br>
+
+  <!-- This is the Add to Cart button -->
+    <button type="button" class="button">Add to Cart</button>
+    <!-- End of the section -->
+  </section>
+</body>
+</html>
