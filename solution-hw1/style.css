@@ -1,0 +1,100 @@
+body.body{
+    width:1200px;
+}
+
+section.product_class{
+    text-align: center;
+    align-content: center;
+    width: 400px;
+    margin: 0 auto
+}
+
+section.top_list{
+    text-align: center;
+}
+
+section.product_class:hover{
+    background-color: yellow;
+    width: 405px;
+    margin: 0 auto;
+}
+
+p.products_heading:hover{
+    background-color: yellow;
+    font-weight: bold;
+    margin:0 auto;
+    width: 100px;
+}
+
+p.cart:hover{
+    background-color: yellow;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* could consolidate price and label */
+p.price{
+    text-decoration: none;
+}
+
+p.label{
+    text-decoration: none;
+}
+
+a.linked:hover{
+    background-color: yellow;
+    font-weight: bold;
+    margin: 0 auto;
+    text-decoration: none;
+    width: 405px;
+    margin: 0 auto;
+}
+
+a.linked{
+    text-decoration: none;
+    color: black;
+}
+
+section.master_div{
+    text-align: center;
+}
+
+section.title{
+    text-align: center;
+}
+
+section.logo_line{
+    border-bottom: solid;
+    border-color: black;
+}
+
+button.button{
+    color:black;
+    background-color: yellow;
+}
+
+img.logo{
+    width: 400px;
+}
+
+img.image{
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 400px;
+}
+
+img.cart_image{
+    width: 200px;
+    height: 200px;
+    border-style:solid;
+    border-width: 2px;
+}
+
+img.image_detail{
+    width: 600px;
+    height: 600px;
+    border-style:solid;
+    border-width: 2px;
+}
