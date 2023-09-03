@@ -1,22 +1,30 @@
-body.body{
-    width:1200px;
-}
-
-section.product_class{
+div.product_class{
     text-align: center;
     align-content: center;
     width: 400px;
     margin: 0 auto
 }
 
-section.top_list{
+div.top_list{
     text-align: center;
 }
 
-section.product_class:hover{
+div.product_class:hover{
     background-color: yellow;
     width: 405px;
     margin: 0 auto;
+}
+
+div.prod_detail_form{
+    width: 180px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+select.dropdown{
+    width: 180px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 p.products_heading:hover{
@@ -33,13 +41,13 @@ p.cart:hover{
     width: 100px;
 }
 
-/* could consolidate price and label */
-p.price{
-    text-decoration: none;
-}
-
 p.label{
     text-decoration: none;
+    text-align: left;
+}
+
+#price{
+    font-weight: bold;
 }
 
 a.linked:hover{
@@ -58,13 +66,10 @@ a.linked{
 
 section.master_div{
     text-align: center;
+    margin: 0 auto;
 }
 
-section.title{
-    text-align: center;
-}
-
-section.logo_line{
+div.logo_line{
     border-bottom: solid;
     border-color: black;
 }
