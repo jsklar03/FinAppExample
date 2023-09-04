@@ -46,6 +46,12 @@ p.label{
     text-align: left;
 }
 
+p.remove{
+    text-decoration: underline;
+    font-size: small;
+    font-weight: bold;
+}
+
 #price{
     font-weight: bold;
 }
