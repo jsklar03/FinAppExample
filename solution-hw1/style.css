@@ -55,12 +55,6 @@ p.cart{
     width: 100px;
 }
 
-/* Defines the width of the labels under the product */
-p.label{
-    text-decoration: none;
-    width: 400px;
-}
-
 /* Defines the style for the "Remove" lines in the shopping cart */
 p.remove{
     text-decoration: underline;
@@ -68,7 +62,7 @@ p.remove{
     font-weight: bold;
 }
 
-/* Bolds the prices by the buttons */
+/* Bolds the prices by the button on the detail page */
 #price{
     font-weight: bold;
 }
@@ -79,13 +73,6 @@ p.remove{
     color: black;
     width: 400px;
 }
-
-/* Defines the styling for linked items when user hovers */
-/* .linked:hover{
-    background-color: yellow;
-    margin: 0 auto;
-    width: 400px;
-} */
 
 .top_link{
     text-decoration: none;
