@@ -74,6 +74,7 @@ p.remove{
     width: 400px;
 }
 
+/* Correct styling for the "Products" and "Cart" links */
 .top_link{
     text-decoration: none;
     color: black;
