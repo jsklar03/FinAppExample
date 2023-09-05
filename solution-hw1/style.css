@@ -1,97 +1,124 @@
 /* I used this: https://www.w3schools.com/css/default.asp */
 /* I used the CSS validator https://jigsaw.w3.org/css-validator/ */
 
+/* Defines the styling for the product divs
+Including the image, text, container */
 div.product_class{
     text-align: center;
     align-content: center;
     width: 400px;
-    margin: 0 auto
-}
-
-div.top_list{
-    text-align: center;
-}
-
-div.product_class:hover{
-    background-color: yellow;
-    width: 405px;
     margin: 0 auto;
 }
 
+/* Defines the behavior when someone hovers over the product_class div */
+div.product_class:hover{
+    background-color: yellow;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* Aligns the Product and Cart lines */
+div.top_list{
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Defines the product detail form's container <select> for dropdowns*/
 div.prod_detail_form{
     width: 180px;
     margin: 0 auto;
     text-align: left;
 }
 
+/* Defines the dropdown boxes and their width */
 select.dropdown{
     width: 180px;
     margin: 0 auto;
     text-align: left;
 }
 
-p.products_heading:hover{
+/* Defines what happens to the "Products" line when user hovers on it */
+p.products_heading{
     background-color: yellow;
     font-weight: bold;
+    text-decoration: none;
     margin:0 auto;
     width: 100px;
 }
 
-p.cart:hover{
+/* Defines what happens when someone hovers over the "Cart" line*/
+p.cart{
     background-color: yellow;
     font-weight: bold;
     margin: 0 auto;
     width: 100px;
 }
 
+/* Defines the width of the labels under the product */
 p.label{
     text-decoration: none;
     text-align: left;
+    width: 400px;
 }
 
+/* Defines the style for the "Remove" lines in the shopping cart */
 p.remove{
     text-decoration: underline;
     font-size: small;
     font-weight: bold;
 }
 
+/* Bolds the prices by the buttons */
 #price{
     font-weight: bold;
 }
 
-a.linked:hover{
+/* Defines the linking styles */
+.linked{
+    /* text-decoration: none; */
+    color: black;
+    width: 400px;
+}
+
+/* Defines the styling for linked items when user hovers */
+.linked:hover{
     background-color: yellow;
     font-weight: bold;
     margin: 0 auto;
-    text-decoration: none;
-    width: 405px;
+    /* text-decoration: none; */
+    width: 400px;
     margin: 0 auto;
 }
 
-a.linked{
+.top_link{
     text-decoration: none;
     color: black;
 }
 
-section.master_div{
+/* Container for the product details page */
+div.master_div{
     text-align: center;
     margin: 0 auto;
 }
 
+/* Adds the logo line */
 div.logo_line{
     border-bottom: solid;
     border-color: black;
 }
 
+/* Gives style to the buttons */
 button.button{
     color:black;
     background-color: yellow;
 }
 
+/* Defines the width of the logo */
 img.logo{
     width: 400px;
 }
 
+/* Defines the size/bordering styles for the images on the Product Gallery */
 img.image{
     border-style: solid;
     border-width: 2px;
@@ -99,6 +126,7 @@ img.image{
     height: 400px;
 }
 
+/* Defines the styling around the images in the Cart*/
 img.cart_image{
     width: 200px;
     height: 200px;
@@ -106,6 +134,7 @@ img.cart_image{
     border-width: 2px;
 }
 
+/* Defines the styling around the image on the product details page */
 img.image_detail{
     width: 600px;
     height: 600px;

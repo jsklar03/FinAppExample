@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Heading works, no errors -->
+  <!-- I used the HTML validator https://validator.w3.org/ -->
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -17,19 +18,19 @@
   </header>
 
   <main>
-<!-- Section defines the line underneath the logo for styling -->
+<!-- div defines the line underneath the logo for styling -->
     <div class="logo_line"></div>
 
 <!-- Contains the contents of the page for centering -->
-  <section class="master_div">
+  <div class="master_div">
     <!-- Links the Product word to the Product Gallery -->
-    <a class = "linked" href="../solution-hw1/index.html">
+    <a class = "top_link" href="../solution-hw1/index.html">
       <p class="products_heading">Products</p>
     </a>
 
   <!-- Links the word cart to the shopping cart -->
-    <a class = "linked" href="../solution-hw1/ShoppingCart.html">
-      <p class="cart">Cart</p>
+    <a class = "top_link" href="../solution-hw1/ShoppingCart.html">
+      <p class="cart_main">Cart</p>
     </a>
 
     <br>
@@ -78,7 +79,7 @@
   <!-- This is the Add to Cart button -->
       <p id="price">$2.49  <button type="button" class="button">Add to Cart</button></p>
     <!-- End of the section -->
-    </section>
+  </div>
   </main>
 </body>
 </html>
