@@ -4,20 +4,22 @@
 /* Defines the styling for the product divs
 Including the image, text, container */
 div.product_class{
-    text-align: center;
+    text-align: left;
     align-content: center;
     width: 400px;
     margin: 0 auto;
 }
 
 /* Defines the behavior when someone hovers over the product_class div */
+/* I used https://www.w3schools.com/cssref/sel_hover.php */
 div.product_class:hover{
     background-color: yellow;
-    width: 400px;
+    width: 402px;
     margin: 0 auto;
+    font-weight: bold;
 }
 
-/* Aligns the Product and Cart lines */
+/* Aligns the Product and Cart lines at the top*/
 div.top_list{
     text-align: center;
     text-decoration: none;
@@ -33,11 +35,9 @@ div.prod_detail_form{
 /* Defines the dropdown boxes and their width */
 select.dropdown{
     width: 180px;
-    margin: 0 auto;
-    text-align: left;
 }
 
-/* Defines what happens to the "Products" line when user hovers on it */
+/* Defines style of the "Products" line */
 p.products_heading{
     background-color: yellow;
     font-weight: bold;
@@ -46,10 +46,11 @@ p.products_heading{
     width: 100px;
 }
 
-/* Defines what happens when someone hovers over the "Cart" line*/
+/* Defines style of the "Cart" line*/
 p.cart{
     background-color: yellow;
     font-weight: bold;
+    text-decoration: none;
     margin: 0 auto;
     width: 100px;
 }
@@ -57,7 +58,6 @@ p.cart{
 /* Defines the width of the labels under the product */
 p.label{
     text-decoration: none;
-    text-align: left;
     width: 400px;
 }
 
@@ -81,21 +81,18 @@ p.remove{
 }
 
 /* Defines the styling for linked items when user hovers */
-.linked:hover{
+/* .linked:hover{
     background-color: yellow;
-    font-weight: bold;
     margin: 0 auto;
-    /* text-decoration: none; */
     width: 400px;
-    margin: 0 auto;
-}
+} */
 
 .top_link{
     text-decoration: none;
     color: black;
 }
 
-/* Container for the product details page */
+/* Container for the product details/shopping cart pages */
 div.master_div{
     text-align: center;
     margin: 0 auto;
@@ -105,6 +102,14 @@ div.master_div{
 div.logo_line{
     border-bottom: solid;
     border-color: black;
+}
+
+/* Adds the small divider line in the shopping cart */
+div.small_line{
+    border-bottom: solid;
+    border-color: black;
+    width: 400px;
+    margin: 0 auto;
 }
 
 /* Gives style to the buttons */
