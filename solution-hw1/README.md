@@ -1,5 +1,5 @@
-# PUI HW 1
+# PUI homework
 
-Deployed Website: https://jsklar03.github.io/pui-hw/solution-hw1/ 
+Deployed website: https://jsklar03.github.io/pui-hw/
 
 Repository link: https://github.com/jsklar03/pui-hw 
