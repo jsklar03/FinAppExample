@@ -20,6 +20,11 @@ a{
     text-decoration: none;
 }
 
+/* For dropdown label */
+p.dropdown_label{
+    text-decoration: none;
+}
+
 /* Defines the styling for the product divs
 Including the image, text, container */
 
