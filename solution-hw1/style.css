@@ -1,13 +1,34 @@
 /* I used this: https://www.w3schools.com/css/default.asp */
 /* I used the CSS validator https://jigsaw.w3.org/css-validator/ */
 
+/* makes the price in the label not underlined */
+.price_label{
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* styles the label */
+p.label{
+    padding: 0px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+/* Styles the links */
+a{
+    text-decoration: none;
+}
+
 /* Defines the styling for the product divs
 Including the image, text, container */
+
 div.product_class{
     text-align: left;
     align-content: center;
     width: 400px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 /* Defines the behavior when someone hovers over the product_class div */
@@ -17,6 +38,7 @@ div.product_class:hover{
     width: 402px;
     margin: 0 auto;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Aligns the Product and Cart lines at the top*/
