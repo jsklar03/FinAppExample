@@ -1,0 +1,192 @@
+/* I used this: https://www.w3schools.com/css/default.asp */
+/* I used the CSS validator https://jigsaw.w3.org/css-validator/ */
+
+/* makes the price in the label not underlined */
+.price_label{
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* styles the label in the product_gallery */
+p.label{
+    padding: 0px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+/* Styles the links and dropdown_labels for glazing/pack-size */
+a, p.dropdown_label, .top_link{
+    text-decoration: none;
+    color: black;
+}
+
+/* Gives the product gallery the right look for HW2 */
+.product_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+p.customize_msg{
+    width: 180px;
+    text-align: left;
+    text-decoration: none;
+}
+
+p.cart_main{
+    padding-left: 80px;
+}
+
+/* Defines the styling for the product divs
+Including the image, text, container */
+
+div.product_class{
+    text-align: left;
+    align-content: center;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Defines the behavior when someone hovers over the product_class div */
+/* I used https://www.w3schools.com/cssref/sel_hover.php */
+div.product_class:hover{
+    background-color: yellow;
+    width: 402px;
+    margin: 0 auto;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Defines the product detail form's container <select> for dropdowns*/
+div.prod_detail_form{
+    width: 180px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Container for the details/shopping cart pages */
+div.master_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-bottom: 100px;
+}
+
+/* Gets the header to be horizontally aligned */
+div.header{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    align-items: center;
+}
+
+/* Gets the NAV_BAR to be horizontally aligned, and take up the rest of the header */
+div.nav_bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: right;
+    width: 100%;
+    border-bottom: solid;
+}
+
+/* Gets the options for Products and Cart to align with one another horizontally */
+div.nav_bar_option_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Gets the forms (dropdowns) for pack size/glazing to align horizontally */
+div.form_parent{
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    width: 200 px;
+}
+
+/* Defines the dropdown boxes and their width */
+select.dropdown{
+    width: 180px;
+}
+
+/* Defines style of the "Products" line */
+p.products_heading{
+    background-color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    margin:0 auto;
+    width: 65px;
+}
+
+/* Defines style of the "Cart" line*/
+p.cart{
+    background-color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* Defines the style for the "Remove" lines in the shopping cart */
+p.remove{
+    text-decoration: underline;
+    font-size: small;
+    font-weight: bold;
+}
+
+/* Bolds the prices by the button on the detail page */
+#price{
+    font-weight: bold;
+}
+
+/* Adds the small divider line in the shopping cart */
+div.small_line{
+    border-bottom: solid;
+    border-color: black;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* Gives style to the buttons */
+button.button{
+    color:black;
+    background-color: yellow;
+}
+
+/* Defines the width of the logo, lies within the header */
+img.logo{
+    width: 400px;
+}
+
+/* Defines the size/bordering styles for the images on the Product Gallery */
+img.image{
+    border-style: solid;
+    border-width: 2px;
+    width: 400px;
+    height: 400px;
+}
+
+/* Defines the styling around the images in the Cart*/
+img.cart_image{
+    width: 200px;
+    height: 200px;
+    border-style:solid;
+    border-width: 2px;
+}
+
+/* Defines the styling around the image on the product details page */
+img.image_detail{
+    width: 600px;
+    height: 600px;
+    border-style:solid;
+    border-width: 2px;
+}
