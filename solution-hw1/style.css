@@ -15,14 +15,10 @@ p.label{
     text-decoration: underline;
 }
 
-/* Styles the links */
-a{
+/* Styles the links and dropdown_label*/
+a, p.dropdown_label, a.linked{
     text-decoration: none;
-}
-
-/* For dropdown label */
-p.dropdown_label{
-    text-decoration: none;
+    color: black;
 }
 
 /* Defines the styling for the product divs
@@ -94,17 +90,8 @@ p.remove{
     font-weight: bold;
 }
 
-/* Defines the linking styles */
-.linked{
-    /* text-decoration: none; */
-    color: black;
-    width: 400px;
-}
-
-/* Correct styling for the "Products" and "Cart" links */
-.top_link{
-    text-decoration: none;
-    color: black;
+div.top_list{
+    padding-top: 10px;
 }
 
 /* Container for the product details/shopping cart pages */
