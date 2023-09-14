@@ -131,7 +131,7 @@ div.form_parent{
 div.shopping_cart{
     display:flex;
     flex-direction: column;
-    align-content: right;
+    justify-items: right;
 }
 
 div.shopping_cart_img_box{
@@ -223,7 +223,6 @@ img.image_detail{
 }
 
 h1.h1{
-    padding-left: 200px;
-    padding-top: 20px;
+    padding-top: 50px;
     font-weight: normal;
 }
