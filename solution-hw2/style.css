@@ -80,9 +80,9 @@ div.master_div{
     justify-content: center;
     margin: 0 auto;
     width: 100%;
-    padding-top: 30px;
+    /* padding-top: 30px;
     padding-left: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 100px; */
 }
 
 /* Gets the header to be horizontally aligned */
@@ -91,6 +91,12 @@ div.header{
     flex-direction: row;
     width:100%;
     align-items: center;
+}
+
+div.nav_bar_box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* Gets the NAV_BAR to be horizontally aligned, and take up the rest of the header */
@@ -125,6 +131,17 @@ div.form_parent{
 div.shopping_cart{
     display:flex;
     flex-direction: column;
+    align-content: right;
+}
+
+div.shopping_cart_img_box{
+    display: flex;
+    flex-direction: column;
+}
+
+div.shopping_cart_item{
+    display: flex;
+    flex-direction: row;
 }
 
 /* Defines the dropdown boxes and their width */
@@ -206,5 +223,7 @@ img.image_detail{
 }
 
 h1.h1{
-    text-align: center;
+    padding-left: 200px;
+    padding-top: 20px;
+    font-weight: normal;
 }
