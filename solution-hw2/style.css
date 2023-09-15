@@ -127,11 +127,16 @@ div.form_parent{
     padding-left: 100px;
     width: 200 px;
 }
-
+/* Sets up the container for the shopping cart items */
 div.shopping_cart{
     display:flex;
     flex-direction: column;
-    justify-items: right;
+    border-bottom: solid;
+    border-color: black;
+    border-width: calc(100% - 400px);
+    width: 100%;
+    align-items: flex-end;
+    /* align-items: flex-end; */
 }
 
 div.shopping_cart_img_box{
@@ -142,8 +147,17 @@ div.shopping_cart_img_box{
 div.shopping_cart_item{
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+p.cart_detail{
+    width:300px;
+    padding-left: 40px;
 }
 
+p.cart_price{
+    width: 100px;
+    padding-left: 40px;
+}
 /* Defines the dropdown boxes and their width */
 select.dropdown{
     width: 180px;
@@ -177,14 +191,6 @@ p.remove{
 /* Bolds the prices by the button on the detail page */
 #price{
     font-weight: bold;
-}
-
-/* Adds the small divider line in the shopping cart */
-div.small_line{
-    border-bottom: solid;
-    border-color: black;
-    width: 400px;
-    margin: 0 auto;
 }
 
 /* Gives style to the buttons */
