@@ -34,10 +34,12 @@ a, p.dropdown_label, .top_link{
     padding-top: 30px;
 }
 
+/* customize our custom cinnabuns message */
 p.customize_msg{
     width: 180px;
     text-align: left;
     text-decoration: none;
+    font-size: large;
 }
 
 p.cart_main{
