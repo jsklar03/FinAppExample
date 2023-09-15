@@ -44,6 +44,21 @@ p.customize_msg{
 
 p.cart_main{
     padding-left: 80px;
+    width: 50px;
+}
+
+p.cart_main_cart_page{
+    width: 50px;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+p.products_heading_cart{
+    padding-right: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    margin:0 auto;
+    width: 65px;
 }
 
 /* Defines the styling for the product divs
@@ -237,7 +252,8 @@ button.button{
 }
 
 p.total_price{
-    width: 50px;
+    width: 65px;
+    font-size: larger;
 }
 
 /* Defines the width of the logo, lies within the header */
