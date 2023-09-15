@@ -133,12 +133,9 @@ div.form_parent{
 div.shopping_cart{
     display:flex;
     flex-direction: column;
-    border-bottom: solid;
-    border-color: black;
-    border-width: calc(100% - 400px);
-    width: 100%;
     align-items: flex-end;
-    /* align-items: flex-end; */
+    justify-content: flex-end;
+    margin-left: 420px;
 }
 
 div.shopping_cart_img_box{
@@ -150,16 +147,38 @@ div.shopping_cart_item{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 p.cart_detail{
     width:300px;
     padding-left: 40px;
+    font-size: larger;
 }
 
 p.cart_price{
     width: 100px;
-    padding-left: 40px;
+    font-size: large;
 }
+
+div.cart_page_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 45px;
+}
+
+div.checkout_button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+hr{
+    background-color: black;
+    height: 3px;
+    width: 100%;
+}
+
 /* Defines the dropdown boxes and their width */
 select.dropdown{
     width: 180px;
@@ -190,15 +209,35 @@ p.remove{
     font-weight: bold;
 }
 
+div.price_total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: flex-end;
+    align-items: center;
+    font-size: large;
+    width: 400px;
+}
+
 /* Bolds the prices by the button on the detail page */
 #price{
     font-weight: bold;
+}
+
+p#checkout_price{
+    padding-right: 100px;
 }
 
 /* Gives style to the buttons */
 button.button{
     color:black;
     background-color: yellow;
+    width: 109px;
+    height: 32.5px;   
+}
+
+p.total_price{
+    width: 50px;
 }
 
 /* Defines the width of the logo, lies within the header */
