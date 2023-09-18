@@ -42,17 +42,20 @@ p.customize_msg{
     font-size: large;
 }
 
+/* Defines Cart label in the heading on Gallery and Detail pages */
 p.cart_main{
     padding-left: 80px;
     width: 50px;
 }
 
+/* Adds properties to the Cart label in the heading in the Cart page */
 p.cart_main_cart_page{
     width: 50px;
     background-color: yellow;
     font-weight: bold;
 }
 
+/* Product heading in the Cart page. Removes the highlight */
 p.products_heading_cart{
     padding-right: 80px;
     font-weight: bold;
@@ -63,7 +66,6 @@ p.products_heading_cart{
 
 /* Defines the styling for the product divs
 Including the image, text, container */
-
 div.product_class{
     text-align: left;
     align-content: center;
@@ -97,9 +99,6 @@ div.master_div{
     justify-content: center;
     margin: 0 auto;
     width: 100%;
-    /* padding-top: 30px;
-    padding-left: 80px;
-    padding-bottom: 100px; */
 }
 
 /* Gets the header to be horizontally aligned */
@@ -110,6 +109,7 @@ div.header{
     align-items: center;
 }
 
+/* Styles the Navigation Bar flex box */
 div.nav_bar_box{
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@ div.form_parent{
     display: flex;
     flex-direction: column;
     padding-left: 100px;
-    width: 200 px;
+    width: 200px;
 }
 /* Sets up the container for the shopping cart items */
 div.shopping_cart{
@@ -153,11 +153,13 @@ div.shopping_cart{
     margin-left: 420px;
 }
 
+/* groups the image and the remove button into the same container */
 div.shopping_cart_img_box{
     display: flex;
     flex-direction: column;
 }
 
+/* Creates the flexbox for each shopping cart item */
 div.shopping_cart_item{
     display: flex;
     flex-direction: row;
@@ -165,17 +167,20 @@ div.shopping_cart_item{
     justify-content: space-between;
     width: 100%;
 }
+/* Styles the text in the shopping cart */
 p.cart_detail{
     width:300px;
     padding-left: 40px;
     font-size: larger;
 }
 
+/* Gives style to the price in the cart page */
 p.cart_price{
     width: 100px;
     font-size: large;
 }
 
+/* Styles the bottom of the cart page with the price and button */
 div.cart_page_bottom{
     display: flex;
     flex-direction: column;
@@ -183,11 +188,13 @@ div.cart_page_bottom{
     padding-right: 45px;
 }
 
+/* Puts checkout button into the bottom of the cart_page_bottom section */
 div.checkout_button{
     display: flex;
     justify-content: flex-end;
 }
 
+/* Creates the bottom divider line between the cart and the total price on the cart page */
 hr{
     background-color: black;
     height: 3px;
@@ -224,6 +231,7 @@ p.remove{
     font-weight: bold;
 }
 
+/* Gives style to the price total and elements in the bottom of the cart page */
 div.price_total{
     display: flex;
     flex-direction: row;
@@ -251,6 +259,7 @@ button.button{
     height: 32.5px;   
 }
 
+/* Makes the total price bigger */
 p.total_price{
     width: 65px;
     font-size: larger;
@@ -285,6 +294,7 @@ img.image_detail{
     border-width: 2px;
 }
 
+/* Styles the header */
 h1.h1{
     padding-top: 50px;
     font-weight: normal;
