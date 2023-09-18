@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head works properly without error -->
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+  </head>
+
+  <body class="body">
+
+    <!-- Links the logo to the Product Gallery -->
+    <header class="header">
+      <!-- Opening of header container -->
+      <div class="header">
+        <!-- Opens container within header for logo -->
+  
+        <div class="logo_nav_div">  <!-- element 1 in the header -->
+          <a href="../solution-hw2/index.html">
+          <img class="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun Logo">
+          </a>
+          <!-- Closes container within header for logo -->
+        </div>
+  
+        <div class= "nav_bar_box">
+          <div class="nav_bar"> <!-- element 2 in the header -->
+            <!-- Opens the nav_bar div, containing Product and Cart -->
+            <div class="nav_bar_option_box"> 
+              <!-- Opens the div for the nav_bar_options -->
+              <div class="nav_bar_option"> <!-- element 1 in the NAV_BAR -->
+                <!-- Opening of container within nav_bar for Products link -->
+                <a class = "top_link" href="../solution-hw2/index.html">
+                  <p class="products_heading_cart">Products</p>
+                </a>
+            <!-- Closing of container within nav_bar for Products link -->
+              </div>
+  
+          <!-- Links the word cart to the shopping cart -->
+              <div class="nav_bar_option"> <!-- element 2 in the NAV_BAR -->
+                <!-- Opens the container within nav_bar for the Cart option -->
+                <a class = "top_link" href="../solution-hw2/ShoppingCart.html">
+                  <p class="cart_main_cart_page">Cart</p>
+                </a>
+                <!-- Closing the container within nav_bar for the Cart option -->
+              </div>
+            </div>
+          <!-- Closing the nav_bar div -->
+          </div>
+          <h1 class="h1">Shopping Cart</h1>
+        <!-- Closing nav_bar_box div -->
+        </div>
+      <!-- Closing header div -->
+      </div>
+    </header>
+
+    <main>
+      <section id="shopping_cart_page">
+      <!-- opens the container for the cart items -->
+
+      <div class= "shopping_cart">
+      <!-- This section containes the links and the content in the Shopping Cart -->
+        <div class="shopping_cart_item">
+          <!-- This links the image to the Product Detail page -->
+          <div>
+            <img class="cart_image" src="../assets/products/original-cinnamon-roll.jpg" alt="Double Chocolate Cinammon Roll">
+            <p class="remove">Remove</p>
+          </div>
+          <!-- This describes the image to the user -->
+          <!-- The div that holds the description of the cart item -->
+            <p class="cart_detail">Original Cinammon Roll<br>
+            Glazing: Keep Original<br>
+            Pack Size: 1<br>
+            </p>
+            
+            <p class="cart_price">$2.49</p>
+          <!-- End of shopping cart container -->
+        </div>
+
+        <div class="shopping_cart_item">
+          <!-- This links the image to the Product Detail page -->
+          <div>
+            <img class="cart_image" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinammon Roll">
+            <p class="remove">Remove</p>
+          </div>
+          <!-- This describes the image to the user -->
+          <!-- The div that holds the description of the cart item -->
+            <div>
+            <p class="cart_detail">Double Chocolate Cinammon Roll<br>
+            Glazing: Sugar Milk<br>
+            Pack Size: 6<br>
+            </p>
+            </div>
+            <div>
+            <p class="cart_price">$27.45</p>
+            </div>
+          <!-- End of shopping cart item container -->
+        </div>
+        <hr>
+        <div class="cart_page_bottom">
+          <div class="price_total">
+            <p class="total_price">Total</p>
+            <p class="total_price">$29.94</p>
+          </div>
+          <div class="checkout_button">
+              <button type="button" class="button">Checkout</button>
+          </div>
+        </div>
+    </div>
+    </section>
+    </main>
+  </body>
+</html>

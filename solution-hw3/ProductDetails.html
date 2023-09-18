@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Heading works, no errors -->
+  <!-- I used the HTML validator https://validator.w3.org/ -->
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Product Details</title>
+  </head>
+<!-- Starts the body -->
+<body class="body">
+
+  <!-- Links the logo to the Product Details -->
+  <header class="header">
+    <!-- Opening of header container -->
+    <div class="header">
+      <!-- Opens container within header for logo -->
+
+      <div class="logo_nav_div">  <!-- element 1 in the header -->
+        <a href="../solution-hw2/index.html">
+        <img class="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun Logo">
+        </a>
+        <!-- Closes container within header for logo -->
+      </div>
+
+      <div class= "nav_bar_box">
+        <div class="nav_bar"> <!-- element 2 in the header -->
+          <!-- Opens the nav_bar div, containing Product and Cart -->
+          <div class="nav_bar_option_box"> 
+            <!-- Opens the div for the nav_bar_options -->
+            <div class="nav_bar_option"> <!-- element 1 in the NAV_BAR -->
+              <!-- Opening of container within nav_bar for Products link -->
+              <a class = "top_link" href="../solution-hw2/index.html">
+                <p class="products_heading">Products</p>
+              </a>
+          <!-- Closing of container within nav_bar for Products link -->
+            </div>
+
+        <!-- Links the word cart to the shopping cart -->
+            <div class="nav_bar_option"> <!-- element 2 in the NAV_BAR -->
+              <!-- Opens the container within nav_bar for the Cart option -->
+              <a class = "top_link" href="../solution-hw2/ShoppingCart.html">
+                <p class="cart_main">Cart</p>
+              </a>
+              <!-- Closing the container within nav_bar for the Cart option -->
+            </div>
+          </div>
+        <!-- Closing the nav_bar div -->
+        </div>
+        <h1 class="h1">Original cinammon roll</h1>
+      <!-- Closing nav_bar_box div -->
+      </div>
+    <!-- Closing header div -->
+    </div>
+  </header>
+
+  <main>
+    <br>
+    <section id="prod_details">
+    <!-- div defines the line underneath the logo for styling -->
+    <!-- <div class="logo_line"></div> -->
+
+    <!-- Contains the contents of the page for centering -->
+
+    <div class="master_div">
+      <!-- Links the product image to the product gallery -->
+      <img class="image_detail" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinammon Roll">
+
+    <div class = "form_parent">
+      <p class="customize_msg">Customize our delicious hand-made cinamon roll to your liking!</p>
+      <br>
+      <br>
+
+        <div class="glazing_form_parent">  
+          <!-- This is the drop down for the options for Glazing--> 
+          <form class="glazing_form">
+                <!--Renamed label class  -->
+            <p class="dropdown_label">Glazing:<br>
+          <!-- https://www.w3schools.com/tags/tag_select.asp -->
+              <select name="dropdown" class="dropdown" id="glazing_dropdown">
+                <optgroup class="glazing" label="Glazing">
+                  <option id="glaze_orig" value="keep_original">Keep original</option>
+                  <option id="glaze_sm" value="sugar_milk">Sugar milk</option>
+                  <option id="glaze_vm" value="vanilla_milk">Vanilla milk</option>
+                  <option id="glaze_dc" value="double_chocolate">Double chocolate</option>
+                </optgroup>
+              </select>
+            </p>
+          </form>
+      </div>
+      <br>
+
+
+    <!-- This is the drop down for the options for Pack Size -->
+  
+    <div class="pack_size_form_parent">
+      <form class="pack_size_form">
+        <!-- Renamed label class -->
+        <p class="dropdown_label">Pack Size:<br>
+          <!-- https://www.w3schools.com/tags/tag_select.asp -->
+          <select name="dropdown" class="dropdown" id="pack_size_dropdown">
+            <optgroup class="pack_size" label="Pack Size">
+              <option id="pack_size_1" value="1">1</option>
+              <option id="pack_size_3" value="3">3</option>
+              <option id="pack_size_6" value="6">6</option>
+              <option id="pack_size_12" value="12">12</option>
+            </optgroup>
+          </select>
+        </p>
+      </form>
+  </div> 
+  <br>
+      <!-- This is the Add to Cart button -->
+      <p id="price">$2.49  <button type="button" class="button">Add to Cart</button></p>
+      <!-- End of the section -->
+  </div>
+  </div>
+</section>
+  </main>
+</body>
+</html>
