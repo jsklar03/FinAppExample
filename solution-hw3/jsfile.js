@@ -2,7 +2,7 @@
 // glazing price adaptations: original=0, SM=0, VM= +0.50, DC= + 1.50
 
 
-const price = document.getElementById("price").value;
+const price = document.getElementById("detail_price").value;
 
 // prices of rolls
 
@@ -32,7 +32,7 @@ let new_price = Number(price)
 // let pack_size_event = pack_size.addEventListener("click", Pack_Size_Price_Adaptation);
 // let glazing_event = glaze_type.addEventListener("click", Glaze_Price_Adaptation);
 
-
+//Need to change the innerHTML part of this function below.
 
 function GlazeChange(element){
     const Glazing_Change = element.value;
@@ -45,10 +45,14 @@ function GlazeChange(element){
     else if (Glazing_Change=="vanilla_milk"){
         new_price = original_price + vanilla_milk_glaze;
         console.log(new_price);
+        let old_price = document.getElementById("detail_price").value;
+        let price_change = old_price.innerHTML=new_price;
     }
     else if (Glazing_Change=="double_chocolate"){
         new_price = original_price + double_choc_glaze;
         console.log(new_price);
+        let old_price = document.getElementById("detail_price").value;
+        let price_change = old_price.innerHTML=new_price;
     }
 
 }
@@ -62,17 +66,20 @@ function Pack_Size_Price_Adaptation(element){
     else if(Pack_Size_Change == 3){
         new_price = new_price * 3;
         console.log(new_price);
-        new_price = document.getElementbyID("price").innerHTML=new_price;
+        let old_price = document.getElementById("detail_price").value;
+        let price_change = old_price.innerHTML= new_price;
     }
     else if(Pack_Size_Change == 6){
         new_price = new_price * 5;
         console.log(new_price);
-        new_price = document.getElementbyID("price").innerHTML=new_price;
+        let old_price = document.getElementById("detail_price").value;
+        let price_change = old_price.innerHTML= new_price;
     }
     else if(Pack_Size_Change == 12){
         new_price = new_price * 10;
         console.log(new_price);
-        new_price = document.getElementbyID("price").innerHTML=new_price;
+        let old_price = document.getElementById("detail_price").value;
+        let price_change = old_price.innerHTML= new_price;
     }
 }
 
