@@ -78,7 +78,7 @@
                 <!--Renamed label class  -->
             <p class="dropdown_label">Glazing:<br>
           <!-- https://www.w3schools.com/tags/tag_select.asp -->
-              <select name="dropdown" class="dropdown" id="glazing_dropdown" onchange="GlazeChange(this)">
+              <select name="dropdown" class="dropdown" id="glazing_dropdown" onchange="Price_Change(this)">
                 <optgroup class="glazing" label="Glazing">
                   <option id="glaze_orig" value="keep_original">Keep original</option>
                   <option id="glaze_sm" value="sugar_milk">Sugar milk</option>
@@ -99,12 +99,12 @@
         <!-- Renamed label class -->
         <p class="dropdown_label">Pack Size:<br>
           <!-- https://www.w3schools.com/tags/tag_select.asp -->
-          <select name="dropdown" class="dropdown" id="pack_size_dropdown" onchange="Pack_Size_Price_Adaptation(this)">
+          <select name="dropdown" class="dropdown" id="pack_size_dropdown" onchange="Price_Change(this)">
             <optgroup class="pack_size" label="Pack Size">
-              <option id="pack_size_1" value= 1>1</option>
-              <option id="pack_size_3" value= 3>3</option>
-              <option id="pack_size_6" value= 6>6</option>
-              <option id="pack_size_12" value= 12>12</option>
+              <option id="pack_size_1" value= "1">1</option>
+              <option id="pack_size_3" value= "3">3</option>
+              <option id="pack_size_6" value= "6">6</option>
+              <option id="pack_size_12" value= "12">12</option>
             </optgroup>
           </select>
         </p>
