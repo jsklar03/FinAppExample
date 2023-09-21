@@ -1,10 +1,4 @@
-// pack_size price adaptations: 1 = 1X price, 3= 3X price, 6= 5X price, 12=10X price
-// glazing price adaptations: original=0, SM=0, VM= +0.50, DC= + 1.50
-
-
-// let base_price = document.getElementById("detail_price").value;
-// let new_price = parseFloat(base_price);
-// let old_price = new_price
+// I used this https://www.w3schools.com/js/js_htmldom_html.asp
 
 let base_price = 2.49;
 
@@ -42,8 +36,9 @@ function Price_Change(element){
     let pack_size = packSize[pack_option];
     console.log(pack_size);
     new_price = (base_price + glazing_price) * pack_size;
-    console.log(new_price)
-    document.getElementById("detail_price").innerText = "$"+ new_price;
+    let final_price = new_price.toFixed(2)
+    console.log(final_price)
+    document.getElementById("detail_price").innerText = "$"+ final_price;
 };
 
 // function GlazeChange(element){
