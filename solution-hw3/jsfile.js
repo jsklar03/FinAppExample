@@ -13,30 +13,30 @@
 //     twelve: {name: "12", value: 10}
 // }
 
+
+// Sets the base_price constant, provides an abundance of arrays from which to iterate through to populate the dropdowns
 let base_price = 2.49;
 let glaze_name = ["Keep Original", "Sugar Milk", "Vanilla Milk", "Double Chocolate"];
 let glaze_price = [0, 0, 0.50, 1.50];
-let glaze_value = ["keep_original", "sugar_milk", "vanilla_milk", "double_chocolate"];
 let pack_size_name = ["1","3","6","12"];
-let pack_size_num = ["1", "3", "6", "12"];
 
 let glazing_option = document.querySelector("#glazing_dropdown");
 let pack_dropdown = document.querySelector("#pack_size_dropdown");
 
-glazing_option.addEventListener("load", populate_glaze_dropdown());
+glazing_option.addEventListener("load", populate_dropdown());
 
-function populate_glaze_dropdown(){
-    for (let i in glaze_name, glaze_value){
+function populate_dropdown(){
+    for (let i in glaze_name){
         // console.log(glaze_name[i]);
         let new_element = document.createElement("option");
         new_element.innerHTML = glaze_name[i];
-        new_element.value = glaze_value[i];
+        new_element.value = glaze_name[i];
         glazing_option.appendChild(new_element);
     }
-    for (let i in pack_size_name, pack_size_num){
+    for (let i in pack_size_name){
         let new_pack_el = document.createElement("option");
         new_pack_el.innerHTML = pack_size_name[i];
-        new_pack_el.value = pack_size_num[i];
+        new_pack_el.value = pack_size_name[i];
         pack_dropdown.appendChild(new_pack_el);
     }
 }
@@ -52,10 +52,10 @@ const rollPrice = {
 }
 
 const glazingPrice = {
-    "keep_original": 0,
-    "sugar_milk": 0,
-    "vanilla_milk": 0.5,
-    "double_chocolate": 1.5,
+    "Keep Original": 0,
+    "Sugar Milk": 0,
+    "Vanilla Milk": 0.5,
+    "Double Chocolate": 1.5,
 };
 
 const packSize = {
@@ -67,13 +67,9 @@ const packSize = {
 
 function Price_Change(element){
     let glazing_option = document.getElementById("glazing_dropdown").value;
-    console.log(glazing_option);
     let pack_option = document.getElementById("pack_size_dropdown").value;
-    console.log(pack_option);
     let glazing_price = glazingPrice[glazing_option];
-    console.log(glazing_price);
     let pack_size = packSize[pack_option];
-    console.log(pack_size)
     new_price = (base_price + glazing_price) * pack_size;
     let final_price = new_price.toFixed(2);
     document.getElementById("detail_price").innerText = "$"+ final_price;

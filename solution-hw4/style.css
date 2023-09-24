@@ -1,0 +1,301 @@
+/* I used this: https://www.w3schools.com/css/default.asp */
+/* I used the CSS validator https://jigsaw.w3.org/css-validator/ */
+
+/* Adds font */
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* makes the price in the label not underlined */
+.price_label{
+    padding: 0px;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* styles the label in the product_gallery */
+p.label{
+    padding: 0px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+/* Styles the links and dropdown_labels for glazing/pack-size */
+a, p.dropdown_label, .top_link{
+    text-decoration: none;
+    color: black;
+}
+
+/* Gives the product gallery the right look for HW2 */
+.product_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+/* customize our custom cinnabuns message */
+p.customize_msg{
+    width: 180px;
+    text-align: left;
+    text-decoration: none;
+    font-size: large;
+}
+
+/* Defines Cart label in the heading on Gallery and Detail pages */
+p.cart_main{
+    padding-left: 80px;
+    width: 50px;
+}
+
+/* Adds properties to the Cart label in the heading in the Cart page */
+p.cart_main_cart_page{
+    width: 50px;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Product heading in the Cart page. Removes the highlight */
+p.products_heading_cart{
+    padding-right: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    margin:0 auto;
+    width: 65px;
+}
+
+/* Defines the styling for the product divs
+Including the image, text, container */
+div.product_class{
+    text-align: left;
+    align-content: center;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Defines the behavior when someone hovers over the product_class div */
+/* I used https://www.w3schools.com/cssref/sel_hover.php */
+div.product_class:hover{
+    background-color: yellow;
+    width: 289px;
+    margin: 0 auto;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Defines the product detail form's container <select> for dropdowns*/
+div.prod_detail_form{
+    width: 180px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Container for the details/shopping cart pages */
+div.master_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Gets the header to be horizontally aligned */
+div.header{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    align-items: center;
+}
+
+/* Styles the Navigation Bar flex box */
+div.nav_bar_box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Gets the NAV_BAR to be horizontally aligned, and take up the rest of the header */
+/* Need to align the items to so that they appear on the right side */
+/* I used https://www.w3schools.com/cssref/css3_pr_align-items.php */
+div.nav_bar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    width: 100%;
+    border-bottom: solid;
+    padding-bottom: 10px;
+}
+
+/* Gets the options for Products and Cart to align with one another horizontally */
+div.nav_bar_option_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 100px;
+}
+
+/* Gets the forms (dropdowns) for pack size/glazing to align horizontally */
+div.form_parent{
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    width: 200px;
+}
+/* Sets up the container for the shopping cart items */
+div.shopping_cart{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 420px;
+}
+
+/* groups the image and the remove button into the same container */
+div.shopping_cart_img_box{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Creates the flexbox for each shopping cart item */
+div.shopping_cart_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+/* Styles the text in the shopping cart */
+p.cart_detail{
+    width:300px;
+    padding-left: 40px;
+    font-size: larger;
+}
+
+/* Gives style to the price in the cart page */
+p.cart_price{
+    width: 100px;
+    font-size: large;
+}
+
+/* Styles the bottom of the cart page with the price and button */
+div.cart_page_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 45px;
+}
+
+/* Puts checkout button into the bottom of the cart_page_bottom section */
+div.checkout_button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Creates the bottom divider line between the cart and the total price on the cart page */
+hr{
+    background-color: black;
+    height: 3px;
+    width: 100%;
+}
+
+/* Defines the dropdown boxes and their width */
+select.dropdown{
+    width: 180px;
+}
+
+/* Defines style of the "Products" line */
+p.products_heading{
+    background-color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    margin:0 auto;
+    width: 65px;
+}
+
+/* Defines style of the "Cart" line*/
+p.cart{
+    background-color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* Defines the style for the "Remove" lines in the shopping cart */
+p.remove{
+    text-decoration: underline;
+    font-size: small;
+    font-weight: bold;
+}
+
+/* Gives style to the price total and elements in the bottom of the cart page */
+div.price_total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: flex-end;
+    align-items: center;
+    font-size: large;
+    width: 400px;
+}
+
+/* Bolds the prices by the button on the detail page */
+#price{
+    font-weight: bold;
+}
+
+p#checkout_price{
+    padding-right: 100px;
+}
+
+/* Gives style to the buttons */
+button.button{
+    color:black;
+    background-color: yellow;
+    width: 109px;
+    height: 32.5px;   
+}
+
+/* Makes the total price bigger */
+p.total_price{
+    width: 65px;
+    font-size: larger;
+}
+
+/* Defines the width of the logo, lies within the header */
+img.logo{
+    width: 400px;
+}
+
+/* Defines the size/bordering styles for the images on the Product Gallery */
+img.image{
+    border-style: solid;
+    border-width: 2px;
+    width: 285px;
+    height: 285px;
+}
+
+/* Defines the styling around the images in the Cart*/
+img.cart_image{
+    width: 200px;
+    height: 200px;
+    border-style:solid;
+    border-width: 2px;
+}
+
+/* Defines the styling around the image on the product details page */
+img.image_detail{
+    width: 600px;
+    height: 600px;
+    border-style:solid;
+    border-width: 2px;
+}
+
+/* Styles the header */
+h1.h1{
+    padding-top: 50px;
+    font-weight: normal;
+}
