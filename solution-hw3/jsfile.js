@@ -20,11 +20,14 @@ let glaze_name = ["Keep Original", "Sugar Milk", "Vanilla Milk", "Double Chocola
 let glaze_price = [0, 0, 0.50, 1.50];
 let pack_size_name = ["1","3","6","12"];
 
+// Gets the correct elements from HTML file
 let glazing_option = document.querySelector("#glazing_dropdown");
 let pack_dropdown = document.querySelector("#pack_size_dropdown");
 
+// Adds event listener so that the dropdowns populate once the page loads
 glazing_option.addEventListener("load", populate_dropdown());
 
+// Function that populates the dropdown selections once the page loads
 function populate_dropdown(){
     for (let i in glaze_name){
         // console.log(glaze_name[i]);
@@ -41,7 +44,7 @@ function populate_dropdown(){
     }
 }
 
-// prices of rolls
+// prices of rolls -- not needed for now, but possibly later.
 const rollPrice = {
     original_price: 2.49,
     app_cin_price: 3.49,
@@ -51,6 +54,7 @@ const rollPrice = {
     straw_cin_price: 3.99,
 }
 
+// maps the values of the option elements in glazing_dropdown to numerical values to calculate price
 const glazingPrice = {
     "Keep Original": 0,
     "Sugar Milk": 0,
@@ -58,6 +62,7 @@ const glazingPrice = {
     "Double Chocolate": 1.5,
 };
 
+// maps the values of the option elements in the pack_size dropdown to numerical values to calculate price
 const packSize = {
     "1": 1,
     "3": 3,
@@ -65,6 +70,7 @@ const packSize = {
     "12": 10,
 };
 
+// The function that actually re-calculates the total price
 function Price_Change(element){
     let glazing_option = document.getElementById("glazing_dropdown").value;
     let pack_option = document.getElementById("pack_size_dropdown").value;
