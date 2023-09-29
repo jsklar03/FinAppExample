@@ -1,17 +1,4 @@
 // I used this https://www.w3schools.com/js/js_htmldom_html.asp
-// let Glazing_Dict = {
-//     original: {name: "Keep Original", value: 0, str_value:"keep_original"},
-//     sugar: {name:"Sugar Milk", value: 0, str_value:"sugar_milk"},
-//     vanilla: {name:"Vanilla Milk", value: 0.50, str_value: "vanilla_milk"},
-//     chocolate: {name: "Double Chocolate", value: 1.50, str_value: "double_chocolate" }
-// }
-
-// let Pack_Size_Dict = {
-//     one: {name: "1", value: 1},
-//     three: {name: "3", value: 3},
-//     six: {name: "6", value: 5},
-//     twelve: {name: "12", value: 10}
-// }
 
 
 // Sets the base_price constant, provides an abundance of arrays from which to iterate through to populate the dropdowns

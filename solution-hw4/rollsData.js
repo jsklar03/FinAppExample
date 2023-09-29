@@ -37,11 +37,11 @@ let cart = [];
 // that begins with a question mark. (These are known as "search parameters")
 
 const queryString = window.location.search;
-console.log(queryString);
+//console.log(queryString);
 
 // Then, we use the query string to create a URLSearchParams object:
 const params = new URLSearchParams(queryString);
-console.log(params);
+//console.log(params);
 
 const rollType = params.get('roll');
 console.log(rollType);
@@ -62,8 +62,8 @@ console.log(detail_page_img)
 let detail_page_head = document.querySelector(".h1")
 console.log(detail_page_head)
 // Gets the price from the dictionary above
-let basePrice = rolls[rollType]["basePrice"]
-console.log(basePrice)
+base_price = rolls[rollType]["basePrice"]
+console.log(base_price)
 // Gets the element from the Details HTML page
 let detail_basePrice = document.querySelector("#detail_price")
 console.log(detail_basePrice)
@@ -75,7 +75,7 @@ console.log(detail_page_img)
 detail_page_head.innerHTML = detail_img_heading;
 console.log(detail_page_head)
 // Changes the basePrice
-detail_basePrice.innerHTML = "$"+basePrice;
+detail_basePrice.innerHTML = "$"+base_price;
 console.log(detail_basePrice)
   
   
