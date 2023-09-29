@@ -69,4 +69,34 @@ function Price_Change(element){
 };
 
 
+// Gets the roll type from the rolls dictionary
+let img_source = rolls[rollType]["imageFile"]
+console.log(img_source)
+// Sets the image Path to the image source
+let imagePath = '../assets/products/' + img_source
+console.log(imagePath)
+// Gets the heading from the dictionary
+let detail_img_heading = rolls[rollType]["img_head"]
+console.log(detail_img_heading)
+// Gets the element from the Product Detail page for the image to change
+let detail_page_img = document.querySelector(".image_detail")
+console.log(detail_page_img)
+// Gets the heading element from the Product Detail page
+let detail_page_head = document.querySelector(".h1")
+console.log(detail_page_head)
+// Gets the price from the dictionary above
+base_price = rolls[rollType]["basePrice"]
+console.log(base_price)
+// Gets the element from the Details HTML page
+let detail_basePrice = document.querySelector("#detail_price")
+console.log(detail_basePrice)
 
+//  Changes the image
+detail_page_img.src = imagePath;
+console.log(detail_page_img)
+// Changes the heading
+detail_page_head.innerHTML = detail_img_heading;
+console.log(detail_page_head)
+// Changes the basePrice
+detail_basePrice.innerHTML = "$"+base_price;
+console.log(detail_basePrice)
