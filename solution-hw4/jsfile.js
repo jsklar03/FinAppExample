@@ -127,8 +127,7 @@ add_to_cart_btn.onclick = function(add_to_cart){
     new_cart_item.type = rollType;
     cart.push(new_cart_item);
     console.log(new_cart_item);
-    console.log(cart)
-    console.log(cart)
+    console.log(cart);
 };
 
 
