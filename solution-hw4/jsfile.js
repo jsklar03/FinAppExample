@@ -78,7 +78,7 @@ let imagePath = '../assets/products/' + img_source
 
 // Gets the heading from the dictionary
 let detail_img_heading = rolls[rollType]["imgHead"]
-console.log(detail_img_heading)
+
 // Gets the element from the Product Detail page for the image to change
 let detail_page_img = document.querySelector(".image_detail")
 
@@ -123,15 +123,10 @@ class Roll {
 
 let add_to_cart_btn = document.querySelector("#add_to_cart");
 add_to_cart_btn.onclick = function(add_to_cart){
-    // let new_cart_item = new Roll;
     let new_cart_item = new Roll(rollType, rollGlaze, packSize, basePrice);
     new_cart_item.type = rollType;
-    console.log(new_cart_item);
-    new_cart_item.rollGlaze = rollGlaze;
-    new_cart_item.packSize = packSize;
-    new_cart_item.basePrice = basePrice;
     cart.push(new_cart_item);
-    console.log(new_cart_item)
+    console.log(new_cart_item);
     console.log(cart)
 };
 
