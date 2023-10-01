@@ -2,32 +2,32 @@ const rolls = {
     "Original": {
         "basePrice": 2.49,
         "imageFile": "original-cinnamon-roll.jpg",
-        "img_head": "Original Cinnamon Roll"
+        "imgHead": "Original Cinnamon Roll"
     },
     "Apple": {
         "basePrice": 3.49,
         "imageFile": "apple-cinnamon-roll.jpg",
-        "img_head": "Apple Cinnamon Roll"
+        "imgHead": "Apple Cinnamon Roll"
     },
     "Raisin": {
         "basePrice": 2.99,
         "imageFile": "raisin-cinnamon-roll.jpg",
-        "img_head": "Raisin Cinnamon Roll"
+        "imgHead": "Raisin Cinnamon Roll"
     },
     "Walnut": {
         "basePrice": 3.49,
         "imageFile": "walnut-cinnamon-roll.jpg",
-        "img_head": "Walnut Cinnamon Roll"
+        "imgHead": "Walnut Cinnamon Roll"
     },
     "Double-Chocolate": {
         "basePrice": 3.99,
         "imageFile": "double-chocolate-cinnamon-roll.jpg",
-        "img_head": "Double-Chocolate Cinnamon Roll"
+        "imgHead": "Double-Chocolate Cinnamon Roll"
     },
     "Strawberry": {
         "basePrice": 3.99,
         "imageFile": "strawberry-cinnamon-roll.jpg",
-        "img_head": "Strawberry Cinnamon Roll"
+        "imgHead": "Strawberry Cinnamon Roll"
     }    
 };
 
@@ -36,45 +36,24 @@ let cart = [];
 // First, we get the query string from the URL. This is the list of parameters
 // that begins with a question mark. (These are known as "search parameters")
 
-const queryString = window.location.search;
-//console.log(queryString);
+// const queryString = window.location.search;
+// //console.log(queryString);
 
-// Then, we use the query string to create a URLSearchParams object:
-const params = new URLSearchParams(queryString);
-//console.log(params);
+// // Then, we use the query string to create a URLSearchParams object:
+// const params = new URLSearchParams(queryString);
+// //console.log(params);
 
-const rollType = params.get('roll');
-console.log(rollType);
+// const rollType = params.get('roll');
+// console.log(rollType);
 
-// // Gets the roll type from the rolls dictionary
-// let img_source = rolls[rollType]["imageFile"]
-// console.log(img_source)
-// // Sets the image Path to the image source
-// let imagePath = '../assets/products/' + img_source
-// console.log(imagePath)
-// // Gets the heading from the dictionary
-// let detail_img_heading = rolls[rollType]["img_head"]
-// console.log(detail_img_heading)
-// // Gets the element from the Product Detail page for the image to change
-// let detail_page_img = document.querySelector(".image_detail")
-// console.log(detail_page_img)
-// // Gets the heading element from the Product Detail page
-// let detail_page_head = document.querySelector(".h1")
-// console.log(detail_page_head)
-// // Gets the price from the dictionary above
-// base_price = rolls[rollType]["basePrice"]
-// console.log(base_price)
-// // Gets the element from the Details HTML page
-// let detail_basePrice = document.querySelector("#detail_price")
-// console.log(detail_basePrice)
+// // For updating the cart
+// class Roll {
+//   constructor(rollType, glazing_option, pack_size, base_price) {
+//       this.type = rolls[rollType];
+//       this.glazing =  glazing_option;
+//       this.size = pack_size;
+//       this.base_price = base_price;
+//   }
+// }
 
-// //  Changes the image
-// detail_page_img.src = imagePath;
-// console.log(detail_page_img)
-// // Changes the heading
-// detail_page_head.innerHTML = detail_img_heading;
-// console.log(detail_page_head)
-// // Changes the basePrice
-// detail_basePrice.innerHTML = "$"+base_price;
-// console.log(detail_basePrice)
 
