@@ -128,6 +128,7 @@ add_to_cart_btn.onclick = function(add_to_cart){
     cart.push(new_cart_item);
     console.log(new_cart_item);
     console.log(cart)
+    console.log(cart)
 };
 
 
