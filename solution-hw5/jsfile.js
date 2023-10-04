@@ -1,5 +1,6 @@
 
-
+//Sets Cart Array:
+let cart = [];
 
 // Sets the basePrice constant, provides an abundance of arrays from which to iterate through to populate the dropdowns
 let basePrice = 2.49;
@@ -10,7 +11,7 @@ let pack_size_name = ["1","3","6","12"];
 // Gets the correct elements from HTML file
 let rollGlaze = document.querySelector("#glazing_dropdown");
 let packSize = document.querySelector("#pack_size_dropdown");
-console.log(packSize)
+//console.log(packSize)
 // Adds event listener so that the dropdowns populate once the page loads
 rollGlaze.addEventListener("load", populate_dropdown());
 
@@ -130,4 +131,10 @@ add_to_cart_btn.onclick = function(add_to_cart){
     console.log(cart);
 };
 
+//-------------------------------------- Shopping Cart------
+let Remove = document.querySelector(".remove");
+
+function Remove_Item(){
+
+}
 
