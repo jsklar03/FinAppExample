@@ -74,20 +74,15 @@ detail_page_head.innerHTML = detail_img_heading;
 detail_basePrice.innerHTML = "$"+basePrice;
 
 let add_to_cart_btn = document.querySelector("#add_to_cart");
-add_to_cart_btn.onclick = function(add_to_cart){
+add_to_cart_btn.onclick = 
+function(add_to_cart){
     let new_cart_item = new Roll(rollType, rollGlaze, packSize, basePrice);
     new_cart_item.type = rollType;
     cart.push(new_cart_item);
     console.log(new_cart_item);
     console.log(cart);
-    // Added today
-    let cartJSON = JSON.stringify(cart);
-    console.log(cartJSON);
-    for (i in cart){
-        localStorage.setItem(cartJSON.keys,cartJSON.values);
-        console.log(cartJSON.keys)
-        console.log(localStorage.setItem(cartJSON.keys,cartJSON.values))
-    }
+    cartSet.add(new_cart_item)
+    console.log(cartSet)
 };
 
 //-------------------------------------- Shopping Cart------

@@ -66,3 +66,5 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
+
+let cartSet = new Set()
