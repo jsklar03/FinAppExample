@@ -71,7 +71,6 @@ function Price_Change(element){
     document.getElementById("detail_price").innerText = "$"+ final_price;
 };
 
-
 // Gets the roll type from the rolls dictionary
 let img_source = rolls[rollType]["imageFile"]
 // Sets the image Path to the image source
@@ -101,12 +100,6 @@ console.log(detail_page_head)
 detail_basePrice.innerHTML = "$"+basePrice;
 console.log(detail_basePrice)
 
-// Above works fine, below needs attention
-//-----------------------------------------
-// Adding stuff to the cart part
-// For updating the cart
-
-
 class Roll {
     constructor(rollType, rollGlaze, packSize, basePrice) {
         console.log(rollType);
@@ -119,8 +112,6 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
-// let new_cart_item = new Roll(rollType, rollGlaze, pack_size, basePrice);
-
 
 let add_to_cart_btn = document.querySelector("#add_to_cart");
 add_to_cart_btn.onclick = function(add_to_cart){
@@ -132,9 +123,5 @@ add_to_cart_btn.onclick = function(add_to_cart){
 };
 
 //-------------------------------------- Shopping Cart------
-let Remove = document.querySelector(".remove");
-
-function Remove_Item(){
-
-}
-
+localStorage.setItem(Roll.type,Roll(rollType))
+console.log(localStorage.setItem(Roll.type,Roll(rollType)))
