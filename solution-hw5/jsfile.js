@@ -1,13 +1,3 @@
-
-//Sets Cart Array:
-let cart = [];
-
-// Sets the basePrice constant, provides an abundance of arrays from which to iterate through to populate the dropdowns
-let basePrice = 2.49;
-let glaze_name = ["Keep Original", "Sugar Milk", "Vanilla Milk", "Double Chocolate"];
-let glaze_price = [0, 0, 0.50, 1.50];
-let pack_size_name = ["1","3","6","12"];
-
 // Gets the correct elements from HTML file
 let rollGlaze = document.querySelector("#glazing_dropdown");
 let packSize = document.querySelector("#pack_size_dropdown");
@@ -44,22 +34,6 @@ function populate_dropdown(){
     }
 }
 
-// maps the values of the option elements in glazing_dropdown to numerical values to calculate price
-const glazingPrice = {
-    "Keep Original": 0,
-    "Sugar Milk": 0,
-    "Vanilla Milk": 0.5,
-    "Double Chocolate": 1.5,
-};
-
-// maps the values of the option elements in the pack_size dropdown to numerical values to calculate price
-const pack_size_dict = {
-    "1": 1,
-    "3": 3,
-    "6": 5,
-    "12": 10,
-};
-
 // The function that actually re-calculates the total price
 function Price_Change(element){
     let rollGlaze = document.getElementById("glazing_dropdown").value;
@@ -92,26 +66,12 @@ let detail_basePrice = document.querySelector("#detail_price")
 
 //  Changes the image
 detail_page_img.src = imagePath;
-console.log(detail_page_img)
+
 // Changes the heading
 detail_page_head.innerHTML = detail_img_heading;
-console.log(detail_page_head)
+
 // Changes the basePrice
 detail_basePrice.innerHTML = "$"+basePrice;
-console.log(detail_basePrice)
-
-class Roll {
-    constructor(rollType, rollGlaze, packSize, basePrice) {
-        console.log(rollType);
-        console.log(rollGlaze);
-        console.log(packSize.selectedIndex);
-        console.log(basePrice);
-        this.type = rollType["basePrice"];
-        this.glazing =  glaze_name[rollGlaze.selectedIndex];
-        this.size = pack_size_name[packSize.selectedIndex];
-        this.basePrice = basePrice;
-    }
-}
 
 let add_to_cart_btn = document.querySelector("#add_to_cart");
 add_to_cart_btn.onclick = function(add_to_cart){
@@ -120,8 +80,15 @@ add_to_cart_btn.onclick = function(add_to_cart){
     cart.push(new_cart_item);
     console.log(new_cart_item);
     console.log(cart);
+    // Added today
+    let cartJSON = JSON.stringify(cart);
+    console.log(cartJSON);
+    for (i in cart){
+        localStorage.setItem(cartJSON.keys,cartJSON.values);
+        console.log(cartJSON.keys)
+        console.log(localStorage.setItem(cartJSON.keys,cartJSON.values))
+    }
 };
 
 //-------------------------------------- Shopping Cart------
-localStorage.setItem(Roll.type,Roll(rollType))
-console.log(localStorage.setItem(Roll.type,Roll(rollType)))
+

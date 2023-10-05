@@ -9,7 +9,8 @@ update the cart's total price.
 
 
 //----- For later ----------
-
+localStorage.setItem(Roll.type,Roll(rollType))
+console.log(localStorage.setItem(Roll.type,Roll(rollType)))
 
 let Remove = document.getElementsByClassName("remove");
 Remove.addEventListener("click", Remove_Item)
@@ -17,3 +18,4 @@ Remove.addEventListener("click", Remove_Item)
 function Remove_Item(){
 
 }
+

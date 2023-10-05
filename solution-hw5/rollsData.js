@@ -31,4 +31,38 @@ const rolls = {
     }    
 };
 
+let cart = [];
 
+let basePrice = 2.49;
+let glaze_name = ["Keep Original", "Sugar Milk", "Vanilla Milk", "Double Chocolate"];
+let glaze_price = [0, 0, 0.50, 1.50];
+let pack_size_name = ["1","3","6","12"];
+
+// maps the values of the option elements in glazing_dropdown to numerical values to calculate price
+const glazingPrice = {
+    "Keep Original": 0,
+    "Sugar Milk": 0,
+    "Vanilla Milk": 0.5,
+    "Double Chocolate": 1.5,
+};
+
+// maps the values of the option elements in the pack_size dropdown to numerical values to calculate price
+const pack_size_dict = {
+    "1": 1,
+    "3": 3,
+    "6": 5,
+    "12": 10,
+};
+
+class Roll {
+    constructor(rollType, rollGlaze, packSize, basePrice) {
+        console.log(rollType);
+        console.log(rollGlaze);
+        console.log(packSize.selectedIndex);
+        console.log(basePrice);
+        this.type = rollType["basePrice"];
+        this.glazing =  glaze_name[rollGlaze.selectedIndex];
+        this.size = pack_size_name[packSize.selectedIndex];
+        this.basePrice = basePrice;
+    }
+}
