@@ -60,10 +60,11 @@
 
       <div class= "shopping_cart">
       <!-- This section containes the links and the content in the Shopping Cart -->
+      <template class = "cart_template"> 
         <div class="shopping_cart_item">
           <!-- This links the image to the Product Detail page -->
           <div>
-            <img class="cart_image" src="../assets/products/original-cinnamon-roll.jpg" alt="Double Chocolate Cinammon Roll">
+            <img class="cart_image" src= >
             <p class="remove">Remove</p>
           </div>
           <!-- This describes the image to the user -->
@@ -73,34 +74,18 @@
             Pack Size: 1<br>
             </p>
             
-            <p class="cart_price">$2.49</p>
+            <p class="cart_price"></p>
           <!-- End of shopping cart container -->
         </div>
-
-        <div class="shopping_cart_item">
-          <!-- This links the image to the Product Detail page -->
-          <div>
-            <img class="cart_image" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinammon Roll">
-            <p class="remove">Remove</p>
-          </div>
-          <!-- This describes the image to the user -->
-          <!-- The div that holds the description of the cart item -->
-            <div>
-            <p class="cart_detail">Double Chocolate Cinammon Roll<br>
-            Glazing: Sugar Milk<br>
-            Pack Size: 6<br>
-            </p>
-            </div>
-            <div>
-            <p class="cart_price">$27.45</p>
-            </div>
+        <!-- End of the template -->
+      </template> 
           <!-- End of shopping cart item container -->
-        </div>
+    </div>
         <hr>
         <div class="cart_page_bottom">
           <div class="price_total">
             <p class="total_price">Total</p>
-            <p class="total_price">$29.94</p>
+            <p class="total_price">$0.00</p>
           </div>
           <div class="checkout_button">
               <button type="button" class="button">Checkout</button>
