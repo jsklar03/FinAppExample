@@ -9,12 +9,20 @@ update the cart's total price.
 
 
 //----- For later ----------
+const template = document.querySelector("#cart_template");
+const clone = template.content.cloneNode(true);
+clone.querySelector("element");
+clone.querySelector(".cart_image");
 
-
-let Remove = document.getElementsByClassName("remove");
-Remove.addEventListener("click", Remove_Item)
-
-function Remove_Item(){
+for (let item in cartSet){
 
 }
+
+
+// let Remove = document.getElementsByClassName("remove");
+// Remove.addEventListener("click", Remove_Item)
+
+// function Remove_Item(){
+
+// }
 

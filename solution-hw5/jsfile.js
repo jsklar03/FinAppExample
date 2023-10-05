@@ -43,6 +43,7 @@ function Price_Change(element){
     new_price = (basePrice + glazing_price) * pack_size;
     let final_price = new_price.toFixed(2);
     document.getElementById("detail_price").innerText = "$"+ final_price;
+    return final_price
 };
 
 // Gets the roll type from the rolls dictionary
@@ -75,13 +76,11 @@ detail_basePrice.innerHTML = "$"+basePrice;
 
 let add_to_cart_btn = document.querySelector("#add_to_cart");
 add_to_cart_btn.onclick = 
-function(add_to_cart){
+function add_to_cart(){
     let new_cart_item = new Roll(rollType, rollGlaze, packSize, basePrice);
     new_cart_item.type = rollType;
     cart.push(new_cart_item);
-    console.log(new_cart_item);
-    console.log(cart);
-    cartSet.add(new_cart_item)
+    cartSet.add(new_cart_item);
     console.log(cartSet)
 };
 

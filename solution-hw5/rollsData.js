@@ -32,6 +32,7 @@ const rolls = {
 };
 
 let cart = [];
+const cartSet = new Set();
 
 let basePrice = 2.49;
 let glaze_name = ["Keep Original", "Sugar Milk", "Vanilla Milk", "Double Chocolate"];
@@ -64,7 +65,14 @@ class Roll {
         this.glazing =  glaze_name[rollGlaze.selectedIndex];
         this.size = pack_size_name[packSize.selectedIndex];
         this.basePrice = basePrice;
+        this.element = null;
+    }
+    calc_total_price(type, glazing, size, basePrice){
+        let roll_type = type;
+        let new_price = (basePrice + glazingPrice[glazing]) * pack_size_dict[size];
+        let final_price = new_price.toFixed(2);
+        return final_price
     }
 }
 
-let cartSet = new Set()
+
