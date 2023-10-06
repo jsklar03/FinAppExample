@@ -164,7 +164,7 @@ div.shopping_cart_item{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 }
 /* Styles the text in the shopping cart */
@@ -298,4 +298,9 @@ img.image_detail{
 h1.h1{
     padding-top: 50px;
     font-weight: normal;
+}
+
+div.cart_details{
+    display: flex;
+    flex-direction: column;
 }
