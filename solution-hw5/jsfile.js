@@ -43,7 +43,6 @@ function Price_Change(element){
     new_price = (basePrice + glazing_price) * pack_size;
     let final_price = new_price.toFixed(2);
     document.getElementById("detail_price").innerText = "$"+ final_price;
-    return final_price
 };
 
 // Gets the roll type from the rolls dictionary
