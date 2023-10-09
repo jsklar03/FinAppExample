@@ -19,6 +19,7 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
+        this.element = null;
     }
 }
 
@@ -60,6 +61,7 @@ cartSet.add(cart_item_4);
 for (let i of cartSet){
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
     createElement(i);
+    updateTotalPrice(i);
 }
 
 console.log(cartSet)
@@ -72,10 +74,16 @@ function createElement(roll) {
     // connect this clone to our notecard.element
     // from this point we only need to refer to notecard.element
     roll.element = clone.querySelector('.shopping_cart_item');
+
+    const removeBtn = roll.element.querySelector(".remove");
+    
+    removeBtn.addEventListener('click',() => {
+        remove_item(roll);
+    });
   
     const cartListElement = document.querySelector('#shopping_cart');
     cartListElement.appendChild(roll.element);
-
+    
     updateRoll(roll)
 }
 
@@ -95,37 +103,31 @@ function updateRoll(roll){
     const item_price = roll.element.querySelector(".cart_item_price");
     item_price.innerText = "$" + roll.calculated_price.toFixed(2);
 
-    updateTotalPrice(roll);
+    //updateTotalPrice(roll);
 }
 
 function updateTotalPrice(roll){
     let total_price = 0.00;
-    console.log(total_price);
+    let total_price_el = document.querySelector(".total_price");
     for (let i of cartSet){
-        let total_price_el = document.querySelector(".total_price");
         total_price = total_price + i.calculated_price;
         console.log(total_price)
         let final_price = total_price.toFixed(2);
-        total_price_el.innerText= "$" + final_price;
+        total_price_el.innerText= "$" + final_price; 
+    }
+    if (cartSet.size == 0){
+        total_price_el.innerText= "$0.00";
     }
 }
 
-//const remove_button = document.querySelector(".remove").addEventListener('click',remove_item);
+
 const cart_item = document.querySelector(".shopping_cart_item");
 const shopping_cart_whole = document.querySelector("#shopping_cart")
 
-
-
-function remove_item(item){
-    console.log("button");
-    for (let i of cartSet){
-        let cart_item = document.querySelector(".shopping_cart_item");
-        cart_item.remove(i);
-        cartSet.delete(i);
-        console.log(cartSet)
-        return updateTotalPrice();
-    }
-    console.log("Hi")
+function remove_item(roll){
+    roll.element.remove();
+    cartSet.delete(roll);
+    updateTotalPrice(roll);
 }
 console.log(cartSet)
 
