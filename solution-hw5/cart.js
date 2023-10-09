@@ -73,7 +73,7 @@ function createElement(roll) {
     // from this point we only need to refer to notecard.element
     roll.element = clone.querySelector('.shopping_cart_item');
   
-    const cartListElement = document.querySelector('.shopping_cart');
+    const cartListElement = document.querySelector('#shopping_cart');
     cartListElement.appendChild(roll.element);
 
     updateRoll(roll)
@@ -110,26 +110,22 @@ function updateTotalPrice(roll){
     }
 }
 
-const remove_button = document.querySelector(".remove");
-const cart_item = document.querySelector(".shopping_cart_item")
+//const remove_button = document.querySelector(".remove").addEventListener('click',remove_item);
+const cart_item = document.querySelector(".shopping_cart_item");
+const shopping_cart_whole = document.querySelector("#shopping_cart")
 
 
-for (let j of cartSet){
-    let remove_button = document.querySelector(".remove");
-    console.log (remove_button)
-}
 
-remove_button.addEventListener('click', () => {
-     remove_item();
-   });
-
-
-function remove_item(roll){
+function remove_item(item){
     console.log("button");
-    cart_item.remove(roll);
-    cartSet.delete();
-    console.log(cartSet);
-    updateTotalPrice(roll);
+    for (let i of cartSet){
+        let cart_item = document.querySelector(".shopping_cart_item");
+        cart_item.remove(i);
+        cartSet.delete(i);
+        console.log(cartSet)
+        return updateTotalPrice();
+    }
+    console.log("Hi")
 }
 console.log(cartSet)
 
