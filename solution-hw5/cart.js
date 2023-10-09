@@ -1,13 +1,4 @@
-/* Notes:
-Need to dynamically populate the cart page first with the selected options. Then I
-need to save the cart selections in the array.
-Once cart page is dynamically populated based on product choices, need to populate
-the cart with HTML divs for styling.
-Once cart page is dynamically populating HTML, then add the remove functionality and
-update the cart's total price.
-*/
-
-const glazing_dict = {
+const glazingPrice = {
     "Keep Original": 0,
     "Sugar Milk": 0,
     "Vanilla Milk": 0.50,
@@ -30,8 +21,6 @@ class Roll {
         this.basePrice = rollPrice;
     }
 }
-
-cartArray = [];
 
 const cart_item_1 = new Roll(
     "Original",
@@ -61,15 +50,19 @@ const cart_item_4 = new Roll(
     3.49
 )
 
-cartArray.push(cart_item_1, cart_item_2, cart_item_3, cart_item_4);
-console.log(cartArray);
+let cartSet = new Set();
 
-for (let i of cartArray){
-    i.calculated_price = (i.basePrice + glazing_dict[i.glazing]) * pack_size_dict[i.size]
+cartSet.add(cart_item_1);
+cartSet.add(cart_item_2);
+cartSet.add(cart_item_3);
+cartSet.add(cart_item_4);
+
+for (let i of cartSet){
+    i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
     createElement(i);
 }
 
-console.log(cartArray)
+console.log(cartSet)
 
 function createElement(roll) {
     // make a clone of the notecard template
@@ -107,10 +100,9 @@ function updateRoll(roll){
 
 function updateTotalPrice(roll){
     let total_price = 0.00;
-    for (let i of cartArray){
-        console.log(i)
+    console.log(total_price);
+    for (let i of cartSet){
         let total_price_el = document.querySelector(".total_price");
-        console.log(total_price_el)
         total_price = total_price + i.calculated_price;
         console.log(total_price)
         let final_price = total_price.toFixed(2);
@@ -118,11 +110,26 @@ function updateTotalPrice(roll){
     }
 }
 
-const remove_button = document.getElementsByClassName("remove");
-remove_button.addEventListener("click",remove_item);
+const remove_button = document.querySelector(".remove");
+const cart_item = document.querySelector(".shopping_cart_item")
 
-function remove_item(){
-    console.log("button")
+
+for (let j of cartSet){
+    let remove_button = document.querySelector(".remove");
+    console.log (remove_button)
 }
 
+remove_button.addEventListener('click', () => {
+     remove_item();
+   });
+
+
+function remove_item(roll){
+    console.log("button");
+    cart_item.remove(roll);
+    cartSet.delete();
+    console.log(cartSet);
+    updateTotalPrice(roll);
+}
+console.log(cartSet)
 
