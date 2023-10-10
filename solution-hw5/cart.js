@@ -64,8 +64,6 @@ for (let i of cartSet){
     updateTotalPrice(i);
 }
 
-console.log(cartSet)
-
 function createElement(roll) {
     // make a clone of the notecard template
     const template = document.querySelector('#cart_template');
@@ -102,8 +100,6 @@ function updateRoll(roll){
 
     const item_price = roll.element.querySelector(".cart_item_price");
     item_price.innerText = "$" + roll.calculated_price.toFixed(2);
-
-    //updateTotalPrice(roll);
 }
 
 function updateTotalPrice(roll){
@@ -111,7 +107,6 @@ function updateTotalPrice(roll){
     let total_price_el = document.querySelector(".total_price");
     for (let i of cartSet){
         total_price = total_price + i.calculated_price;
-        console.log(total_price)
         let final_price = total_price.toFixed(2);
         total_price_el.innerText= "$" + final_price; 
     }
@@ -119,7 +114,6 @@ function updateTotalPrice(roll){
         total_price_el.innerText= "$0.00";
     }
 }
-
 
 const cart_item = document.querySelector(".shopping_cart_item");
 const shopping_cart_whole = document.querySelector("#shopping_cart")
