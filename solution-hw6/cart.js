@@ -8,6 +8,7 @@
 //         this.element = null;
 //     }
 // }
+console.log(cart);
 
 const cart_item_1 = new Roll(
     "Original",
@@ -46,7 +47,6 @@ cartSet.add(cart_item_4);
 
 for (let i of cartSet){
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
-    console.log(i)
     createElement(i);
     updateTotalPrice(i);
 }
@@ -74,7 +74,6 @@ function createElement(roll) {
 
 function updateRoll(roll){
     const roll_img = roll.element.querySelector(".cart_image");
-    console.log(rolls[roll.type].imageFile);
     roll_img.src = '../assets/products/'+ rolls[roll.type].imageFile;
 
     const roll_title = roll.element.querySelector(".cart_title");
