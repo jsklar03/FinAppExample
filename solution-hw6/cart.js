@@ -1,27 +1,27 @@
-const glazingPrice = {
-    "Keep Original": 0,
-    "Sugar Milk": 0,
-    "Vanilla Milk": 0.50,
-    "Double Chocolate": 1.50
-}
+// const glazingPrice = {
+//     "Keep Original": 0,
+//     "Sugar Milk": 0,
+//     "Vanilla Milk": 0.50,
+//     "Double Chocolate": 1.50
+// }
 
-const pack_size_dict = {
-    "1":1,
-    "3":3,
-    "6":5,
-    "12":10
-}
+// const pack_size_dict = {
+//     "1":1,
+//     "3":3,
+//     "6":5,
+//     "12":10
+// }
 
 //----- For later ----------
-class Roll {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = rollPrice;
-        this.element = null;
-    }
-}
+// class Roll {
+//     constructor(rollType, rollGlazing, packSize, rollPrice) {
+//         this.type = rollType;
+//         this.glazing =  rollGlazing;
+//         this.size = packSize;
+//         this.basePrice = rollPrice;
+//         this.element = null;
+//     }
+// }
 
 const cart_item_1 = new Roll(
     "Original",
