@@ -1,18 +1,4 @@
-// const glazingPrice = {
-//     "Keep Original": 0,
-//     "Sugar Milk": 0,
-//     "Vanilla Milk": 0.50,
-//     "Double Chocolate": 1.50
-// }
-
-// const pack_size_dict = {
-//     "1":1,
-//     "3":3,
-//     "6":5,
-//     "12":10
-// }
-
-//----- For later ----------
+// ----- For later ----------
 // class Roll {
 //     constructor(rollType, rollGlazing, packSize, rollPrice) {
 //         this.type = rollType;
@@ -51,7 +37,7 @@ const cart_item_4 = new Roll(
     3.49
 )
 
-let cartSet = new Set();
+// let cartSet = new Set();
 
 cartSet.add(cart_item_1);
 cartSet.add(cart_item_2);
@@ -60,6 +46,7 @@ cartSet.add(cart_item_4);
 
 for (let i of cartSet){
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
+    console.log(i)
     createElement(i);
     updateTotalPrice(i);
 }
@@ -87,6 +74,7 @@ function createElement(roll) {
 
 function updateRoll(roll){
     const roll_img = roll.element.querySelector(".cart_image");
+    console.log(rolls[roll.type].imageFile);
     roll_img.src = '../assets/products/'+ rolls[roll.type].imageFile;
 
     const roll_title = roll.element.querySelector(".cart_title");

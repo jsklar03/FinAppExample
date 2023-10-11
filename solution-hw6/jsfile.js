@@ -78,6 +78,9 @@ add_to_cart_btn.onclick =
 function add_to_cart(){
     let new_cart_item = new Roll(rollType, rollGlaze, packSize, basePrice);
     new_cart_item.type = rollType;
+    new_cart_item.glazing = rollGlaze.value;
+    new_cart_item.size = packSize.value;
+    new_cart_item.basePrice = basePrice;
     cart.push(new_cart_item);
     cartSet.add(new_cart_item);
     console.log(cartSet)

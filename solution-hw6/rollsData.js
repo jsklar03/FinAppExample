@@ -57,22 +57,12 @@ const pack_size_dict = {
 
 class Roll {
     constructor(rollType, rollGlaze, packSize, basePrice) {
-        this.type = rollType["basePrice"];
-        this.glazing =  glaze_name[rollGlaze.selectedIndex];
-        this.size = pack_size_name[packSize.selectedIndex];
+        this.type = rollType;
+        this.glazing =  rollGlaze;
+        this.size = packSize;
         this.basePrice = basePrice;
         this.element = null;
-        console.log(rollType);
-        console.log(rollGlaze);
-        console.log(pack_size_name[packSize.selectedIndex]);
-        console.log(basePrice);
     }
-    // calc_total_price(type, glazing, size, basePrice){
-    //     let roll_type = type;
-    //     let new_price = (basePrice + glazingPrice[glazing]) * pack_size_dict[size];
-    //     let final_price = new_price.toFixed(2);
-    //     return final_price
-    // }
 }
 
 
