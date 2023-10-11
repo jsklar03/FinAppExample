@@ -43,6 +43,7 @@ function Price_Change(element){
     new_price = (basePrice + glazing_price) * pack_size;
     let final_price = new_price.toFixed(2);
     document.getElementById("detail_price").innerText = "$"+ final_price;
+    return final_price;
 };
 
 // Gets the roll type from the rolls dictionary
@@ -81,9 +82,12 @@ function add_to_cart(){
     new_cart_item.glazing = rollGlaze.value;
     new_cart_item.size = packSize.value;
     new_cart_item.basePrice = basePrice;
+    new_cart_item.element = null;
+    new_cart_item.calculated_price = parseFloat(Price_Change(new_cart_item));
     cart.push(new_cart_item);
+    console.log(cart);
     cartSet.add(new_cart_item);
-    console.log(cartSet)
+    console.log(cartSet);
 };
 
 //-------------------------------------- Shopping Cart------

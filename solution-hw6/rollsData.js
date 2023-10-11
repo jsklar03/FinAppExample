@@ -62,6 +62,7 @@ class Roll {
         this.size = packSize;
         this.basePrice = basePrice;
         this.element = null;
+        this.calculated_price = final_price;
     }
 }
 
