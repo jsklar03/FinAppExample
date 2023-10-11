@@ -56,13 +56,13 @@ const pack_size_dict = {
 };
 
 class Roll {
-    constructor(rollType, rollGlaze, packSize, basePrice) {
+    constructor(rollType, rollGlaze, packSize, basePrice, calculated_price) {
         this.type = rollType;
         this.glazing =  rollGlaze;
         this.size = packSize;
         this.basePrice = basePrice;
         this.element = null;
-        this.calculated_price = final_price;
+        this.calculated_price = calculated_price;
     }
 }
 
