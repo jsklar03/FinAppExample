@@ -1,57 +1,21 @@
-// ----- For later ----------
-// class Roll {
-//     constructor(rollType, rollGlazing, packSize, rollPrice) {
-//         this.type = rollType;
-//         this.glazing =  rollGlazing;
-//         this.size = packSize;
-//         this.basePrice = rollPrice;
-//         this.element = null;
-//     }
-// }
-// console.log(cart);
+const storage = JSON.parse(localStorage.getItem('storedItem'));
+console.log(storage);
 
-// const cart_item_1 = new Roll(
-//     "Original",
-//     "Sugar Milk",
-//     "1",
-//     2.49
-// )
+console.log(cart);
 
-// const cart_item_2 = new Roll(
-//     "Walnut",
-//     "Vanilla Milk",
-//     "12",
-//     3.49
-// )
-
-// const cart_item_3 = new Roll(
-//     "Raisin",
-//     "Sugar Milk",
-//     "3",
-//     2.99
-// )
-
-// const cart_item_4 = new Roll(
-//     "Apple",
-//     "Keep Original",
-//     "3",
-//     3.49
-// )
-
-// let cartSet = new Set();
-
-// cartSet.add(cart_item_1);
-// cartSet.add(cart_item_2);
-// cartSet.add(cart_item_3);
-// cartSet.add(cart_item_4);
-
-const storage = localStorage.getItem('storedItem');
+//This iterates through the stored array, then is supposed to create the elements
+//to populate the shopping cart html page.
 
 for (let i of storage){
+    console.log(i);
+    cart.push(i);
+    console.log(cart);
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
     createElement(i);
     updateTotalPrice(i);
 }
+
+console.log(cart);
 
 function createElement(roll) {
     // make a clone of the notecard template
@@ -61,11 +25,12 @@ function createElement(roll) {
     // connect this clone to our notecard.element
     // from this point we only need to refer to notecard.element
     roll.element = clone.querySelector('.shopping_cart_item');
+    console.log(roll.element);
 
     const removeBtn = roll.element.querySelector(".remove");
     
     removeBtn.addEventListener('click',() => {
-        remove_item(roll);
+    remove_item(roll);
     });
   
     const cartListElement = document.querySelector('#shopping_cart');
@@ -74,20 +39,17 @@ function createElement(roll) {
     updateRoll(roll)
 }
 
-
+// Retrieving the locally stored item from storage to populate the dropdown
 function retrieveFromLocalStorage() {
     const cartArrayString = localStorage.getItem('storedItem');
     const cartArray = JSON.parse(cartArrayString);
-    for (const cartData of cartArray) {
-    //    const new_roll = add_to_cart(rollType, rollGlaze.value,packSize.value, basePrice);
-      createElement(new_roll);
-    }
   }
- 
   if (localStorage.getItem('storedItem') != null) {
+    console.log("Hi");
     retrieveFromLocalStorage();
   }
 
+  //updates the roll information on the screen. Provides image/details/price etc. 
 function updateRoll(roll){
     const roll_img = roll.element.querySelector(".cart_image");
     roll_img.src = '../assets/products/'+ rolls[roll.type].imageFile;
@@ -105,15 +67,18 @@ function updateRoll(roll){
     item_price.innerText = "$" + roll.calculated_price.toFixed(2);
 }
 
+//Updates the total price displayed at the bottom of the cart page. Aggregates the calculated
+//price in the set for each item in the cart.
 function updateTotalPrice(roll){
     let total_price = 0.00;
     let total_price_el = document.querySelector(".total_price");
-    for (let i of cartSet){
+    console.log(cart);
+    for (let i of cart){
         total_price = total_price + i.calculated_price;
         let final_price = total_price.toFixed(2);
         total_price_el.innerText= "$" + final_price; 
     }
-    if (cartSet.size == 0){
+    if (cart.length == 0){
         total_price_el.innerText= "$0.00";
     }
 }
@@ -123,8 +88,10 @@ const shopping_cart_whole = document.querySelector("#shopping_cart");
 
 function remove_item(roll){
     roll.element.remove();
-    cartSet.delete(roll);
+    console.log(storage);
+    console.log(typeof(storage));
+    console.log(roll);
+    storage.remove(roll);
     updateTotalPrice(roll);
 }
-console.log(cartSet)
 
