@@ -84,19 +84,14 @@ function add_to_cart(){
     new_cart_item.basePrice = basePrice;
     new_cart_item.element = null;
     new_cart_item.calculated_price = parseFloat(Price_Change(new_cart_item));
+    cart = JSON.parse(localStorage.getItem('storedItem'));
     cart.push(new_cart_item);
     console.log(cart);
-    cartSet.add(new_cart_item);
-    console.log(cartSet);
-    // createElement(new_cart_item);
     saveToLocalStorage()
 };
 //-------------------------------------- Shopping Cart------
 
 function saveToLocalStorage(){
-    const cart = Array.from(cartSet);
-    console.log(cart);
-    
     const cartArrayString = JSON.stringify(cart);
     console.log(cartArrayString);
   

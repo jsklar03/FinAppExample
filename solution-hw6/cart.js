@@ -15,6 +15,8 @@ for (let i of storage){
     updateTotalPrice(i);
 }
 
+
+
 console.log(cart);
 
 function createElement(roll) {
@@ -91,6 +93,7 @@ function remove_item(roll){
     console.log(storage);
     console.log(typeof(storage));
     console.log(roll);
+    console.log(storage.indexof(roll))
     storage.remove(roll);
     updateTotalPrice(roll);
 }
