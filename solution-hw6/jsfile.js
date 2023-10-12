@@ -88,7 +88,36 @@ function add_to_cart(){
     console.log(cart);
     cartSet.add(new_cart_item);
     console.log(cartSet);
+    // createElement(new_cart_item);
+    saveToLocalStorage()
 };
-
 //-------------------------------------- Shopping Cart------
+
+function saveToLocalStorage(){
+    const cartArray = Array.from(cartSet);
+    console.log(cartArray);
+    
+    const cartArrayString = JSON.stringify(cartArray);
+    console.log(cartArrayString);
+  
+    localStorage.setItem('storedItem', cartArrayString);
+    console.log(localStorage.getItem('storedItem'));
+}
+
+// function retrieveFromLocalStorage() {
+//     const cartArrayString = localStorage.getItem('storedItem');
+//     const cartArray = JSON.parse(cartArrayString);
+//     for (const cartData of cartArray) {
+//       const new_roll = add_to_cart(rollType, rollGlaze.value,packSize.value,
+//         basePrice);
+//       createElement(new_roll);
+//     }
+//   }
+  
+//   if (localStorage.getItem('storedItem') != null) {
+//     retrieveFromLocalStorage();
+//   }
+
+
+
 

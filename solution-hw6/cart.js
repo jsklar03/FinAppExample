@@ -8,44 +8,46 @@
 //         this.element = null;
 //     }
 // }
-console.log(cart);
+// console.log(cart);
 
-const cart_item_1 = new Roll(
-    "Original",
-    "Sugar Milk",
-    "1",
-    2.49
-)
+// const cart_item_1 = new Roll(
+//     "Original",
+//     "Sugar Milk",
+//     "1",
+//     2.49
+// )
 
-const cart_item_2 = new Roll(
-    "Walnut",
-    "Vanilla Milk",
-    "12",
-    3.49
-)
+// const cart_item_2 = new Roll(
+//     "Walnut",
+//     "Vanilla Milk",
+//     "12",
+//     3.49
+// )
 
-const cart_item_3 = new Roll(
-    "Raisin",
-    "Sugar Milk",
-    "3",
-    2.99
-)
+// const cart_item_3 = new Roll(
+//     "Raisin",
+//     "Sugar Milk",
+//     "3",
+//     2.99
+// )
 
-const cart_item_4 = new Roll(
-    "Apple",
-    "Keep Original",
-    "3",
-    3.49
-)
+// const cart_item_4 = new Roll(
+//     "Apple",
+//     "Keep Original",
+//     "3",
+//     3.49
+// )
 
 // let cartSet = new Set();
 
-cartSet.add(cart_item_1);
-cartSet.add(cart_item_2);
-cartSet.add(cart_item_3);
-cartSet.add(cart_item_4);
+// cartSet.add(cart_item_1);
+// cartSet.add(cart_item_2);
+// cartSet.add(cart_item_3);
+// cartSet.add(cart_item_4);
 
-for (let i of cartSet){
+const storage = localStorage.getItem('storedItem');
+
+for (let i of storage){
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
     createElement(i);
     updateTotalPrice(i);
@@ -71,6 +73,20 @@ function createElement(roll) {
     
     updateRoll(roll)
 }
+
+
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedItem');
+    const cartArray = JSON.parse(cartArrayString);
+    for (const cartData of cartArray) {
+    //    const new_roll = add_to_cart(rollType, rollGlaze.value,packSize.value, basePrice);
+      createElement(new_roll);
+    }
+  }
+ 
+  if (localStorage.getItem('storedItem') != null) {
+    retrieveFromLocalStorage();
+  }
 
 function updateRoll(roll){
     const roll_img = roll.element.querySelector(".cart_image");
