@@ -41,3 +41,38 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Your existing CSS styles */
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #005696;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    width:max-content;
+    animation: forwards;
+}
+
+.submenu li {
+    margin-right: 0;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin: 5px 0;
+}
+
+/* Adjust the styles for FX, Crypto, and ETFs as needed */

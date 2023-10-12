@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>CoinMarketCap</title>
+    <link rel="stylesheet" href="style.css">
+    <title>infolio</title>
 </head>
 <body>
     <header>
-        <div class="logo">CoinMarketCap</div>
+        <div class="logo">infolio</div>
         <nav>
             <ul>
-                <li><a href="#">Cryptocurrencies</a></li>
-                <li><a href="#">Exchanges</a></li>
-                <li><a href="#">Market Cap</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">Resources</a></li>
+                <li class="dropdown">
+                    <a href="#">Equities</a>
+                    <ul class="submenu">
+                        <li><a href="equities.html">Common Stocks</a></li>
+                        <li><a href="equities.html">Preferred Stocks</a></li>
+                        <li><a href="equities.html">Equity Call Options</a></li>
+                        <li><a href="equities.html">Equity Put Options</a></li>
+                        <li><a href="equities.html">Warrants</a></li>
+                        <li><a href="equities.html">Other</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Fixed Income</a>
+                    <ul class="submenu">
+                        <li><a href="fixed-income.html">Corporate Bonds</a></li>
+                        <li><a href="fixed-income.html">Treasuries</a></li>
+                        <li><a href="fixed-income.html">Coupon Bonds</a></li>
+                        <li><a href="fixed-income.html">Municipal Bonds</a></li>
+                        <li><a href="fixed-income.html">Foreign Government Bonds</a></li>
+                        <li><a href="fixed-income.html">Foreign Corporate Bonds</a></li>
+                    </ul>
+                </li>
+                <li><a href="fx.html">FX</a></li>
+                <li><a href="crypto.html">Crypto</a></li>
+                <li><a href="etfs.html">ETFs</a></li>
+                <li><a href="#">Mutual Funds</a></li>
             </ul>
         </nav>
     </header>
@@ -23,7 +44,7 @@
         <!-- Your content goes here -->
     </main>
     <footer>
-        <p>&copy; 2023 CoinMarketCap</p>
+        <p>&copy; 2023 Infolio</p>
     </footer>
 </body>
 </html>
