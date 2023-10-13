@@ -1,4 +1,4 @@
-const storage = JSON.parse(localStorage.getItem('storedItem'));
+// const storage = JSON.parse(localStorage.getItem('storedItem'));
 console.log(storage);
 
 console.log(cart);
@@ -7,11 +7,9 @@ console.log(cart);
 //to populate the shopping cart html page.
 
 for (let i of storage){
-    console.log(i);
     cart.push(i);
-    console.log(cart);
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
-    i.cart_id = cart.length;
+    i.cart_id = storage.length - 1;
     createElement(i);
     updateTotalPrice(i);
 }
@@ -28,7 +26,6 @@ function createElement(roll) {
     // connect this clone to our notecard.element
     // from this point we only need to refer to notecard.element
     roll.element = clone.querySelector('.shopping_cart_item');
-    console.log(roll.element);
 
     const removeBtn = roll.element.querySelector(".remove");
     
@@ -48,7 +45,7 @@ function retrieveFromLocalStorage() {
     const cartArray = JSON.parse(cartArrayString);
   }
   if (localStorage.getItem('storedItem') != null) {
-    console.log("Hi");
+    console.log("local Storage Not Null");
     retrieveFromLocalStorage();
   }
 
@@ -88,18 +85,55 @@ function updateTotalPrice(roll){
 const cart_item = document.querySelector(".shopping_cart_item");
 const shopping_cart_whole = document.querySelector("#shopping_cart");
 
+let roll_index = 0;
+
 function remove_item(roll){
     roll.element.remove();
-    for (let i=0; i < storage.length; i++){
-        if (roll.cart_id == storage.indexOf(roll)+ 1){
-            storage.splice(i,i+1);
-            updateTotalPrice(roll);
-        }
-        else {
-            let roll_spot = storage.indexOf(roll);
-            storage.splice(roll_spot,roll_spot+1);
-        }
+    for (let i = 0;i< storage.length; i++){
+        roll_index = storage.indexOf(roll);
     }
-    updateTotalPrice(roll);
-}
+    console.log(roll_index);
+    console.log(storage);
+    if(roll_index == 0){
+        storage.splice(0,1);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 1){
+        storage.splice(1,1);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 2){
+        storage.splice(2,2);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 3){
+        storage.splice(3,3);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 4){
+        storage.splice(4,4);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 5){
+        storage.splice(5,5);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 6){
+        storage.splice(6,6);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 7){
+        storage.splice(7,7);
+        return updateTotalPrice(roll);
+    }
+    else if (roll_index == 8){
+        storage.splice(8,8);
+        return updateTotalPrice(roll);
+    }
+    else {
+        storage.splice(roll_index, roll_index - 1);
+        return updateTotalPrice;
+    }
+    }
 
+console.log(storage);

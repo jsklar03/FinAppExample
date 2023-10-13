@@ -84,19 +84,22 @@ function add_to_cart(){
     new_cart_item.basePrice = basePrice;
     new_cart_item.element = null;
     new_cart_item.calculated_price = parseFloat(Price_Change(new_cart_item));
-    new_cart_item.cart_id = cart.length;
-    if (cart.length > 0){
-        console.log(cart);
-        cart = JSON.parse(localStorage.getItem('storedItem'));
+    new_cart_item.cart_id = null;
+    if (localStorage.getItem('storedItem') != null){
+        retrieveFromLocalStorage();
+        console.log("LEN>0");
         console.log(cart);
         cart.push(new_cart_item);
         console.log(cart);
+        saveToLocalStorage();
     }
     else{
+        retrieveFromLocalStorage();
+        console.log("LEN=1");
         cart.push(new_cart_item);
         console.log(cart);
+        saveToLocalStorage();
     }
-    saveToLocalStorage()
 };
 //-------------------------------------- Shopping Cart------
 
@@ -110,6 +113,19 @@ function saveToLocalStorage(){
     localStorage.setItem('storedItem', cartArrayString);
     console.log(localStorage.getItem('storedItem'));
 }
+
+function retrieveFromLocalStorage() {
+    const cartArrayString = localStorage.getItem('storedItem');
+    const cartArray = JSON.parse(cartArrayString);
+    for (const cartData of cartArray) {
+        const add = add_to_cart_btn.onclick;
+      }
+}
+  if (localStorage.getItem('storedItem') != null) {
+    console.log("Storage Not Null");
+    retrieveFromLocalStorage();
+  }
+
 
 console.log(localStorage.getItem('storedItem'));
 

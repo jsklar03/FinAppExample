@@ -31,6 +31,7 @@ const rolls = {
     }    
 };
 
+const storage = JSON.parse(localStorage.getItem('storedItem'));
 let cart = [];
 // const cartSet = new Set();
 
@@ -66,5 +67,4 @@ class Roll {
         this.cart_id = null;
     }
 }
-
 
