@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js" defer></script> -->
     <title>infolio</title>
 </head>
 <body>
@@ -40,6 +47,33 @@
             </ul>
         </nav>
     </header>
+    <body>
+        <h1>Global Market Data</h1>
+        <div class = "main_flex">
+            <div class = "sub_flexbox">
+                <div class = "main_views" id = "eq_indices_view">
+                    <p>EQ Indices</p>
+
+                </div>
+                <div class = "main_views" id = "fi_indices_view">
+                    <p>FI Indices</p>
+                </div>
+            </div>
+            <!-- End of top flexbox for EQ/FI -->
+            <div class = "sub_flexbox">
+                <div class = "main_views" id = "forex_view">
+                    <p>FOREX</p>
+                </div>
+                <div class = "main_views" id = "crypto_view">
+                    <p>CRYPTO</p>
+                </div>
+            </div>
+            <div id="portfolio_flexbox">
+                <p>Portfolio Data</p>
+            </div>
+            <!-- Close of main flexbox -->
+        </div>
+    </body>
     <main>
         <!-- Your content goes here -->
     </main>

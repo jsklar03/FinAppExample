@@ -32,7 +32,7 @@ const rolls = {
 };
 
 let cart = [];
-const cartSet = new Set();
+// const cartSet = new Set();
 
 let basePrice = 2.49;
 let glaze_name = ["Keep Original", "Sugar Milk", "Vanilla Milk", "Double Chocolate"];
@@ -63,8 +63,8 @@ class Roll {
         this.basePrice = basePrice;
         this.element = null;
         this.calculated_price = calculated_price;
+        this.cart_id = null;
     }
 }
-
 
 

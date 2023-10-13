@@ -2,6 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+main {
+    padding: 20px;
+    height: 80%; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -29,10 +39,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: #fff;
-}
-
-main {
-    padding: 20px;
 }
 
 footer {
@@ -76,3 +82,37 @@ footer {
 }
 
 /* Adjust the styles for FX, Crypto, and ETFs as needed */
+.main_flexbox {
+    display: flex;
+    flex-direction: column;
+    height: 65vh; /* 65% of the viewport height */
+    width: 100%;
+    padding: 20px;
+    border:black;
+    box-sizing: border-box;
+}
+
+.sub_flexbox {
+    display: flex;
+    border:black;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50%; /* Adjust the height as needed */
+    width: 100%;
+}
+
+.main_views {
+    flex: 1;
+    padding: 10px;
+    height: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    border: 10px solid blue;
+}
+
+#portfolio_flexbox{
+    height: 400px;
+    width: width("sub_flexbox");
+    border: 10px solid red;
+    padding: 20px;
+}

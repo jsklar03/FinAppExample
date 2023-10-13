@@ -11,6 +11,7 @@ for (let i of storage){
     cart.push(i);
     console.log(cart);
     i.calculated_price = (i.basePrice + glazingPrice[i.glazing]) * pack_size_dict[i.size];
+    i.cart_id = cart.length;
     createElement(i);
     updateTotalPrice(i);
 }
@@ -74,13 +75,12 @@ function updateRoll(roll){
 function updateTotalPrice(roll){
     let total_price = 0.00;
     let total_price_el = document.querySelector(".total_price");
-    console.log(cart);
-    for (let i of cart){
+    for (let i of storage){
         total_price = total_price + i.calculated_price;
         let final_price = total_price.toFixed(2);
         total_price_el.innerText= "$" + final_price; 
     }
-    if (cart.length == 0){
+    if (storage.length == 0){
         total_price_el.innerText= "$0.00";
     }
 }
@@ -90,11 +90,16 @@ const shopping_cart_whole = document.querySelector("#shopping_cart");
 
 function remove_item(roll){
     roll.element.remove();
-    console.log(storage);
-    console.log(typeof(storage));
-    console.log(roll);
-    console.log(storage.indexof(roll))
-    storage.remove(roll);
+    for (let i=0; i < storage.length; i++){
+        if (roll.cart_id == storage.indexOf(roll)+ 1){
+            storage.splice(i,i+1);
+            updateTotalPrice(roll);
+        }
+        else {
+            let roll_spot = storage.indexOf(roll);
+            storage.splice(roll_spot,roll_spot+1);
+        }
+    }
     updateTotalPrice(roll);
 }
 
