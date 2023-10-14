@@ -86,7 +86,7 @@ function add_to_cart(){
     new_cart_item.calculated_price = parseFloat(Price_Change(new_cart_item));
     new_cart_item.cart_id = null;
     if (localStorage.getItem('storedItem') != null){
-        retrieveFromLocalStorage();
+        // retrieveFromLocalStorage();
         cart_retrieval = localStorage.getItem('storedItem');
         cart= JSON.parse(cart_retrieval);
         console.log("LEN>0");
@@ -119,7 +119,7 @@ function saveToLocalStorage(){
 function retrieveFromLocalStorage() {
     const cartArrayString = localStorage.getItem('storedItem');
     const cartArray = JSON.parse(cartArrayString);
-    const add = add_to_cart_btn.onclick;
+    // const add = add_to_cart_btn.onclick;
 }
 
 if (localStorage.getItem('storedItem') != null) {

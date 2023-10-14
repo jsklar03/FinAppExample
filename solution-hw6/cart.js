@@ -91,70 +91,27 @@ function remove_item(roll){
     roll.element.remove();
     for (let i = 0;i< storage.length; i++){
         roll_index = storage.indexOf(roll);
-    }
+        }
     console.log(roll_index);
     console.log(storage);
     if(roll_index == 0){
+        item = cart[0,1];
+        cart.splice[0,1];
         storage.splice(0,1);
-        saveToLocalStorage();
-        return updateTotalPrice(roll);
-    }
+        updateTotalPrice(roll);
+        localStorage.removeItem(cart);
+        }
     else(roll_index == roll_index);{
+        item = storage[roll_index,roll_index];
+        cart.splice[roll_index,roll_index];
         storage.splice(roll_index,roll_index);
-        saveToLocalStorage();
-        return updateTotalPrice(roll);
-    }
-    // else if (roll_index == 1){
-    //     storage.splice(1,1);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 2){
-    //     storage.splice(2,2);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 3){
-    //     storage.splice(3,3);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 4){
-    //     storage.splice(4,4);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 5){
-    //     storage.splice(5,5);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 6){
-    //     storage.splice(6,6);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 7){
-    //     storage.splice(7,7);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else if (roll_index == 8){
-    //     storage.splice(8,8);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice(roll);
-    // }
-    // else {
-    //     storage.splice(roll_index, roll_index - 1);
-    //     saveToLocalStorage(storage);
-    //     return updateTotalPrice;
-    // }
+        updateTotalPrice(roll);
+        localStorage.removeItem(cart);
+        }
+    console.log(storage)
     }
 
-function saveToLocalStorage(){
-    // const cart = Array.from(cartSet);
-    // console.log(cart);
-        
+function saveToLocalStorage(){  
     const cartArrayString = JSON.stringify(cart);
     console.log(cartArrayString);
       
