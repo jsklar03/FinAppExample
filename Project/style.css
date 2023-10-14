@@ -1,13 +1,12 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100vh; /* Adjust the height as needed */
 }
 
 main {
-    padding: 20px;
-    height: 80%; /* Adjust the height as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,12 +14,16 @@ main {
 }
 
 header {
-    background-color: #005696;
+    background-color: black;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+}
+
+h1, p {
+    color:white;
 }
 
 .logo {
@@ -58,7 +61,7 @@ footer {
 .submenu {
     display: none;
     position: absolute;
-    background-color: #005696;
+    background-color:#333;
     padding: 10px;
     list-style: none;
     margin: 0;
@@ -66,6 +69,7 @@ footer {
 
 .dropdown:hover .submenu {
     display: block;
+    color:#333;
     width:max-content;
     animation: forwards;
 }
@@ -94,7 +98,7 @@ footer {
 
 .sub_flexbox {
     display: flex;
-    border:black;
+    border:white;
     flex-direction: row;
     justify-content: space-between;
     height: 50%; /* Adjust the height as needed */
@@ -108,10 +112,12 @@ footer {
     width: 400px;
     box-sizing: border-box;
     border: 10px solid blue;
+    background-color: #333;
 }
 
 #portfolio_flexbox{
-    height: 400px;
+    background-color:#333;
+    height: 800px;
     width: width("sub_flexbox");
     border: 10px solid red;
     padding: 20px;
