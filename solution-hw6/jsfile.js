@@ -87,6 +87,8 @@ function add_to_cart(){
     new_cart_item.cart_id = null;
     if (localStorage.getItem('storedItem') != null){
         retrieveFromLocalStorage();
+        cart_retrieval = localStorage.getItem('storedItem');
+        cart= JSON.parse(cart_retrieval);
         console.log("LEN>0");
         console.log(cart);
         cart.push(new_cart_item);
@@ -94,7 +96,7 @@ function add_to_cart(){
         saveToLocalStorage();
     }
     else{
-        retrieveFromLocalStorage();
+        // retrieveFromLocalStorage();
         console.log("LEN=1");
         cart.push(new_cart_item);
         console.log(cart);
@@ -117,11 +119,10 @@ function saveToLocalStorage(){
 function retrieveFromLocalStorage() {
     const cartArrayString = localStorage.getItem('storedItem');
     const cartArray = JSON.parse(cartArrayString);
-    for (const cartData of cartArray) {
-        const add = add_to_cart_btn.onclick;
-      }
+    const add = add_to_cart_btn.onclick;
 }
-  if (localStorage.getItem('storedItem') != null) {
+
+if (localStorage.getItem('storedItem') != null) {
     console.log("Storage Not Null");
     retrieveFromLocalStorage();
   }
