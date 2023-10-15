@@ -1,8 +1,3 @@
-// const storage = JSON.parse(localStorage.getItem('storedItem'));
-console.log(storage);
-
-console.log(cart);
-
 //This iterates through the stored array, then is supposed to create the elements
 //to populate the shopping cart html page.
 
@@ -13,8 +8,6 @@ for (let i of storage){
     createElement(i);
     updateTotalPrice(i);
 }
-
-
 
 console.log(cart);
 
@@ -36,7 +29,7 @@ function createElement(roll) {
     const cartListElement = document.querySelector('#shopping_cart');
     cartListElement.appendChild(roll.element);
     
-    updateRoll(roll)
+    updateRoll(roll);
 }
 
 // Retrieving the locally stored item from storage to populate the dropdown
@@ -95,28 +88,8 @@ function remove_item(roll){
     storage.splice(storage.indexOf(roll),1);
     updateTotalPrice(roll);
     saveToLocalStorage();
-
-    // for (let i = 0;i< storage.length; i++){
-    //     roll_index = storage.indexOf(roll);
-    //     }
-    // console.log(roll_index);
-    // console.log(storage);
-    // if(roll_index == 0){
-    //     item = cart[0,1];
-    //     cart.splice[0,1];
-    //     storage.splice(0,1);
-    //     updateTotalPrice(roll);
-    //     localStorage.removeItem(cart);
-    //     }
-    // else(roll_index == roll_index);{
-    //     item = storage[roll_index,roll_index];
-    //     cart.splice[roll_index,roll_index];
-    //     storage.splice(roll_index,roll_index);
-    //     updateTotalPrice(roll);
-    //     localStorage.removeItem(cart);
-    //     }
-    console.log(storage)
-    console.log(cart)
+    console.log(storage);
+    console.log(cart);
     }
 
 function saveToLocalStorage(){  
