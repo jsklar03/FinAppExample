@@ -85,30 +85,38 @@ function updateTotalPrice(roll){
 const cart_item = document.querySelector(".shopping_cart_item");
 const shopping_cart_whole = document.querySelector("#shopping_cart");
 
+console.log(localStorage.getItem('storedItem'[1]));
+
 let roll_index = 0;
 
 function remove_item(roll){
     roll.element.remove();
-    for (let i = 0;i< storage.length; i++){
-        roll_index = storage.indexOf(roll);
-        }
-    console.log(roll_index);
-    console.log(storage);
-    if(roll_index == 0){
-        item = cart[0,1];
-        cart.splice[0,1];
-        storage.splice(0,1);
-        updateTotalPrice(roll);
-        localStorage.removeItem(cart);
-        }
-    else(roll_index == roll_index);{
-        item = storage[roll_index,roll_index];
-        cart.splice[roll_index,roll_index];
-        storage.splice(roll_index,roll_index);
-        updateTotalPrice(roll);
-        localStorage.removeItem(cart);
-        }
+    cart.splice(cart.indexOf(roll,1));
+    storage.splice(storage.indexOf(roll),1);
+    updateTotalPrice(roll);
+    saveToLocalStorage();
+
+    // for (let i = 0;i< storage.length; i++){
+    //     roll_index = storage.indexOf(roll);
+    //     }
+    // console.log(roll_index);
+    // console.log(storage);
+    // if(roll_index == 0){
+    //     item = cart[0,1];
+    //     cart.splice[0,1];
+    //     storage.splice(0,1);
+    //     updateTotalPrice(roll);
+    //     localStorage.removeItem(cart);
+    //     }
+    // else(roll_index == roll_index);{
+    //     item = storage[roll_index,roll_index];
+    //     cart.splice[roll_index,roll_index];
+    //     storage.splice(roll_index,roll_index);
+    //     updateTotalPrice(roll);
+    //     localStorage.removeItem(cart);
+    //     }
     console.log(storage)
+    console.log(cart)
     }
 
 function saveToLocalStorage(){  
